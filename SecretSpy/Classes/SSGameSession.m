@@ -16,6 +16,7 @@
 @property (nonatomic, readwrite) NSDate *startTime;
 @property (nonatomic, readwrite) NSUInteger currentPlayerIndex;
 @property (nonatomic, readwrite) NSUInteger playersCount;
+@property (nonatomic) NSArray *wordsArray;
 
 @end
 
@@ -28,7 +29,8 @@
         self.playersCount = playersCount;
         self.spyCount = spyCount;
         self.currentPlayerIndex = 0;
-        self.placeWord = @"Madagaskar";//TODO remove
+        int randomIndex = arc4random() % self.wordsArray.count;
+        self.placeWord = NSLocalizedString(self.wordsArray[randomIndex], nil);
         [self setup];
     }
     return self;
@@ -81,6 +83,21 @@
         }
     }];
     return spys;
+}
+    
+- (NSArray *)wordsArray {
+    if (_wordsArray) {
+        return _wordsArray;
+    }
+    NSDictionary *dict = [self JSONFromFile];
+    _wordsArray = [dict objectForKey:@"words"];
+    return _wordsArray;
+}
+    
+- (NSDictionary *)JSONFromFile {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"words" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    return [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
 }
 
 @end
