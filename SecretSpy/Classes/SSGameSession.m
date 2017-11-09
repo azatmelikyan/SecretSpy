@@ -21,7 +21,7 @@
 
 @implementation SSGameSession
 
-- (instancetype)initWithPlayersCount:(int)playersCount spyCount:(int)spyCount {
+- (instancetype)initWithPlayersCount:(NSUInteger)playersCount spyCount:(NSUInteger)spyCount {
     self = [super init];
     if (self) {
         self.players = [NSMutableArray new];

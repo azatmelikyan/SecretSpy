@@ -20,7 +20,7 @@
 
 - (NSString *)nextWord;
 
-- (instancetype)initWithPlayersCount:(int)playersCount spyCount:(int)spyCount;
+- (instancetype)initWithPlayersCount:(NSUInteger)playersCount spyCount:(NSUInteger)spyCount;
 
 - (void)startTimer;
 
