@@ -15,6 +15,11 @@
 		CEFE6C621FB0EE1700EA3CC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFE6C611FB0EE1700EA3CC3 /* main.m */; };
 		CEFE6C6C1FB0EE1700EA3CC3 /* SecretSpyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFE6C6B1FB0EE1700EA3CC3 /* SecretSpyTests.m */; };
 		CEFE6C771FB0EE1700EA3CC3 /* SecretSpyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFE6C761FB0EE1700EA3CC3 /* SecretSpyUITests.m */; };
+		CEFE6C871FB0F41E00EA3CC3 /* SSGameSession.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFE6C861FB0F41E00EA3CC3 /* SSGameSession.m */; };
+		CEFE6C8A1FB0F47400EA3CC3 /* SSPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFE6C891FB0F47400EA3CC3 /* SSPlayer.m */; };
+		CEFE6C8E1FB36C7100EA3CC3 /* SSGameContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFE6C8C1FB36C7100EA3CC3 /* SSGameContainerViewController.m */; };
+		CEFE6C8F1FB36C7100EA3CC3 /* SSGameContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEFE6C8D1FB36C7100EA3CC3 /* SSGameContainerViewController.xib */; };
+		CEFE6C961FB38C5F00EA3CC3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEFE6C981FB38C5F00EA3CC3 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,20 @@
 		CEFE6C721FB0EE1700EA3CC3 /* SecretSpyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecretSpyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFE6C761FB0EE1700EA3CC3 /* SecretSpyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecretSpyUITests.m; sourceTree = "<group>"; };
 		CEFE6C781FB0EE1700EA3CC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEFE6C851FB0F41E00EA3CC3 /* SSGameSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSGameSession.h; sourceTree = "<group>"; };
+		CEFE6C861FB0F41E00EA3CC3 /* SSGameSession.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSGameSession.m; sourceTree = "<group>"; };
+		CEFE6C881FB0F47400EA3CC3 /* SSPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSPlayer.h; sourceTree = "<group>"; };
+		CEFE6C891FB0F47400EA3CC3 /* SSPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSPlayer.m; sourceTree = "<group>"; };
+		CEFE6C8B1FB36C7100EA3CC3 /* SSGameContainerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSGameContainerViewController.h; sourceTree = "<group>"; };
+		CEFE6C8C1FB36C7100EA3CC3 /* SSGameContainerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSGameContainerViewController.m; sourceTree = "<group>"; };
+		CEFE6C8D1FB36C7100EA3CC3 /* SSGameContainerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSGameContainerViewController.xib; sourceTree = "<group>"; };
+		CEFE6C901FB38B6000EA3CC3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		CEFE6C911FB38B6000EA3CC3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		CEFE6C921FB38BA200EA3CC3 /* hy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hy; path = hy.lproj/Main.strings; sourceTree = "<group>"; };
+		CEFE6C931FB38BA200EA3CC3 /* hy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hy; path = hy.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		CEFE6C971FB38C5F00EA3CC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CEFE6C991FB38C6200EA3CC3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CEFE6C9A1FB38C6300EA3CC3 /* hy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hy; path = hy.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +100,7 @@
 		CEFE6C461FB0EE1700EA3CC3 = {
 			isa = PBXGroup;
 			children = (
+				CEFE6C981FB38C5F00EA3CC3 /* Localizable.strings */,
 				CEFE6C511FB0EE1700EA3CC3 /* SecretSpy */,
 				CEFE6C6A1FB0EE1700EA3CC3 /* SecretSpyTests */,
 				CEFE6C751FB0EE1700EA3CC3 /* SecretSpyUITests */,
@@ -101,7 +121,7 @@
 		CEFE6C511FB0EE1700EA3CC3 /* SecretSpy */ = {
 			isa = PBXGroup;
 			children = (
-				CEFE6C841FB0EE4200EA3CC3 /* New Group */,
+				CEFE6C841FB0EE4200EA3CC3 /* Classes */,
 				CEFE6C521FB0EE1700EA3CC3 /* AppDelegate.h */,
 				CEFE6C531FB0EE1700EA3CC3 /* AppDelegate.m */,
 				CEFE6C551FB0EE1700EA3CC3 /* ViewController.h */,
@@ -133,11 +153,18 @@
 			path = SecretSpyUITests;
 			sourceTree = "<group>";
 		};
-		CEFE6C841FB0EE4200EA3CC3 /* New Group */ = {
+		CEFE6C841FB0EE4200EA3CC3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CEFE6C851FB0F41E00EA3CC3 /* SSGameSession.h */,
+				CEFE6C861FB0F41E00EA3CC3 /* SSGameSession.m */,
+				CEFE6C881FB0F47400EA3CC3 /* SSPlayer.h */,
+				CEFE6C891FB0F47400EA3CC3 /* SSPlayer.m */,
+				CEFE6C8B1FB36C7100EA3CC3 /* SSGameContainerViewController.h */,
+				CEFE6C8C1FB36C7100EA3CC3 /* SSGameContainerViewController.m */,
+				CEFE6C8D1FB36C7100EA3CC3 /* SSGameContainerViewController.xib */,
 			);
-			path = "New Group";
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +255,8 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				hy,
 			);
 			mainGroup = CEFE6C461FB0EE1700EA3CC3;
 			productRefGroup = CEFE6C501FB0EE1700EA3CC3 /* Products */;
@@ -246,6 +275,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEFE6C961FB38C5F00EA3CC3 /* Localizable.strings in Resources */,
+				CEFE6C8F1FB36C7100EA3CC3 /* SSGameContainerViewController.xib in Resources */,
 				CEFE6C5F1FB0EE1700EA3CC3 /* LaunchScreen.storyboard in Resources */,
 				CEFE6C5C1FB0EE1700EA3CC3 /* Assets.xcassets in Resources */,
 				CEFE6C5A1FB0EE1700EA3CC3 /* Main.storyboard in Resources */,
@@ -275,7 +306,10 @@
 			files = (
 				CEFE6C571FB0EE1700EA3CC3 /* ViewController.m in Sources */,
 				CEFE6C621FB0EE1700EA3CC3 /* main.m in Sources */,
+				CEFE6C871FB0F41E00EA3CC3 /* SSGameSession.m in Sources */,
 				CEFE6C541FB0EE1700EA3CC3 /* AppDelegate.m in Sources */,
+				CEFE6C8E1FB36C7100EA3CC3 /* SSGameContainerViewController.m in Sources */,
+				CEFE6C8A1FB0F47400EA3CC3 /* SSPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +349,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				CEFE6C591FB0EE1700EA3CC3 /* Base */,
+				CEFE6C901FB38B6000EA3CC3 /* ru */,
+				CEFE6C921FB38BA200EA3CC3 /* hy */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -323,8 +359,20 @@
 			isa = PBXVariantGroup;
 			children = (
 				CEFE6C5E1FB0EE1700EA3CC3 /* Base */,
+				CEFE6C911FB38B6000EA3CC3 /* ru */,
+				CEFE6C931FB38BA200EA3CC3 /* hy */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CEFE6C981FB38C5F00EA3CC3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEFE6C971FB38C5F00EA3CC3 /* en */,
+				CEFE6C991FB38C6200EA3CC3 /* ru */,
+				CEFE6C9A1FB38C6300EA3CC3 /* hy */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -334,6 +382,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -389,6 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
