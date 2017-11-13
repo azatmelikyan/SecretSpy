@@ -12,6 +12,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *playerLabel;
 @property (weak, nonatomic) IBOutlet UILabel *wordLabel;
 @property (weak, nonatomic) IBOutlet UIButton *showAndHideButton;
+@property (nonatomic) NSTimer *timer;
+@property (nonatomic) int remainingCounts;
+
 
 @property (nonatomic) SSGameSession *gameSession;
 
@@ -23,8 +26,18 @@
     self = [super init];
     if (self) {
         self.gameSession = session;
+        self.remainingCounts = 70;
     }
     return self;
+}
+
+- (void)countDown {
+    if (--self.remainingCounts == 0) {
+        [self.timer invalidate];
+    }
+    int minutes = self.remainingCounts / 60;
+    int seconds = self.remainingCounts % 60;
+    self.wordLabel.text = [NSString stringWithFormat:@"%i : %i", minutes, seconds];
 }
 
 - (void)viewDidLoad {
@@ -51,6 +64,13 @@
         if (self.gameSession.currentPlayerIndex == self.gameSession.players.count) {
             self.playerLabel.text = @"Timer";
             [sender setTitle:@"Start Timer" forState:UIControlStateNormal];
+            self.timer = [NSTimer scheduledTimerWithTimeInterval:2
+                                                          target:self
+                                                        selector:@selector(countDown)
+                                                        userInfo:nil
+                                                         repeats:YES];
+            self.wordLabel.hidden = NO;
+            sender.hidden = YES;
             return;
         }
         
