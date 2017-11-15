@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -43,13 +42,28 @@
                         <action selector="showAndHideClick:" destination="-1" eventType="touchUpInside" id="ADb-kN-4QV"/>
                     </connections>
                 </button>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Heh-Ie-mPK">
+                    <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <items>
+                        <navigationItem title="Title" id="B5L-ZD-kvQ">
+                            <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6Id-xL-fig">
+                                <connections>
+                                    <action selector="backButtonClicked:" destination="-1" id="C2W-Rb-wR4"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
             </subviews>
             <color key="backgroundColor" red="0.7213369564962322" green="0.90143727620488112" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="hQm-9z-gWC" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="8cZ-fQ-4Be"/>
+                <constraint firstItem="Heh-Ie-mPK" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="IRL-6i-EUU"/>
                 <constraint firstItem="mqV-qJ-zmI" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="Pzg-qa-v6Y"/>
+                <constraint firstItem="Heh-Ie-mPK" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="Wwz-pw-j3n"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="top" secondItem="mqV-qJ-zmI" secondAttribute="top" constant="-227" id="bIi-wl-vgF"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="top" secondItem="hQm-9z-gWC" secondAttribute="top" constant="-41" id="tRn-8W-aqg"/>
+                <constraint firstItem="Heh-Ie-mPK" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="vmi-Wm-wLg"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="33.5" y="54.5"/>

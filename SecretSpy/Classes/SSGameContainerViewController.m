@@ -61,6 +61,9 @@
         [sender setTitle:@"Hide" forState:UIControlStateNormal];
     }
 }
+- (IBAction)backButtonClicked:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 /*
 #pragma mark - Navigation

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5D33CDB1FB8E1890039BB79 /* SSRulesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D33CD91FB8E1890039BB79 /* SSRulesViewController.m */; };
+		A5D33CDC1FB8E1890039BB79 /* SSRulesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D33CDA1FB8E1890039BB79 /* SSRulesViewController.xib */; };
+		A5D33CE81FBA38BA0039BB79 /* VLDContextSheetItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D33CE31FBA38BA0039BB79 /* VLDContextSheetItemView.m */; };
+		A5D33CE91FBA38BA0039BB79 /* VLDContextSheetItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D33CE41FBA38BA0039BB79 /* VLDContextSheetItem.m */; };
+		A5D33CEA1FBA38BA0039BB79 /* VLDContextSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D33CE61FBA38BA0039BB79 /* VLDContextSheet.m */; };
 		AC4366A51FB4DD3700A5A9E1 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = AC4366A41FB4DD3700A5A9E1 /* words.json */; };
 		CEFE6C541FB0EE1700EA3CC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFE6C531FB0EE1700EA3CC3 /* AppDelegate.m */; };
 		CEFE6C571FB0EE1700EA3CC3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFE6C561FB0EE1700EA3CC3 /* ViewController.m */; };
@@ -41,6 +46,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A5D33CD81FB8E1890039BB79 /* SSRulesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSRulesViewController.h; sourceTree = "<group>"; };
+		A5D33CD91FB8E1890039BB79 /* SSRulesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSRulesViewController.m; sourceTree = "<group>"; };
+		A5D33CDA1FB8E1890039BB79 /* SSRulesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSRulesViewController.xib; sourceTree = "<group>"; };
+		A5D33CE21FBA38BA0039BB79 /* VLDContextSheetItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VLDContextSheetItem.h; path = SecretSpy/Classes/VLDContextSheetItem.h; sourceTree = SOURCE_ROOT; };
+		A5D33CE31FBA38BA0039BB79 /* VLDContextSheetItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VLDContextSheetItemView.m; path = SecretSpy/Classes/VLDContextSheetItemView.m; sourceTree = SOURCE_ROOT; };
+		A5D33CE41FBA38BA0039BB79 /* VLDContextSheetItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VLDContextSheetItem.m; path = SecretSpy/Classes/VLDContextSheetItem.m; sourceTree = SOURCE_ROOT; };
+		A5D33CE51FBA38BA0039BB79 /* VLDContextSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VLDContextSheet.h; path = SecretSpy/Classes/VLDContextSheet.h; sourceTree = SOURCE_ROOT; };
+		A5D33CE61FBA38BA0039BB79 /* VLDContextSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VLDContextSheet.m; path = SecretSpy/Classes/VLDContextSheet.m; sourceTree = SOURCE_ROOT; };
+		A5D33CE71FBA38BA0039BB79 /* VLDContextSheetItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VLDContextSheetItemView.h; path = SecretSpy/Classes/VLDContextSheetItemView.h; sourceTree = SOURCE_ROOT; };
 		AC4366A41FB4DD3700A5A9E1 /* words.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
 		CEFE6C4F1FB0EE1700EA3CC3 /* SecretSpy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretSpy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFE6C521FB0EE1700EA3CC3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -99,6 +113,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A5D33CE11FBA38A40039BB79 /* contextItem */ = {
+			isa = PBXGroup;
+			children = (
+				A5D33CE51FBA38BA0039BB79 /* VLDContextSheet.h */,
+				A5D33CE61FBA38BA0039BB79 /* VLDContextSheet.m */,
+				A5D33CE21FBA38BA0039BB79 /* VLDContextSheetItem.h */,
+				A5D33CE41FBA38BA0039BB79 /* VLDContextSheetItem.m */,
+				A5D33CE71FBA38BA0039BB79 /* VLDContextSheetItemView.h */,
+				A5D33CE31FBA38BA0039BB79 /* VLDContextSheetItemView.m */,
+			);
+			path = contextItem;
+			sourceTree = "<group>";
+		};
 		CEFE6C461FB0EE1700EA3CC3 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +186,7 @@
 		CEFE6C841FB0EE4200EA3CC3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A5D33CE11FBA38A40039BB79 /* contextItem */,
 				CEFE6C851FB0F41E00EA3CC3 /* SSGameSession.h */,
 				CEFE6C861FB0F41E00EA3CC3 /* SSGameSession.m */,
 				CEFE6C881FB0F47400EA3CC3 /* SSPlayer.h */,
@@ -166,6 +194,9 @@
 				CEFE6C8B1FB36C7100EA3CC3 /* SSGameContainerViewController.h */,
 				CEFE6C8C1FB36C7100EA3CC3 /* SSGameContainerViewController.m */,
 				CEFE6C8D1FB36C7100EA3CC3 /* SSGameContainerViewController.xib */,
+				A5D33CD81FB8E1890039BB79 /* SSRulesViewController.h */,
+				A5D33CD91FB8E1890039BB79 /* SSRulesViewController.m */,
+				A5D33CDA1FB8E1890039BB79 /* SSRulesViewController.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -281,6 +312,7 @@
 				CEFE6C961FB38C5F00EA3CC3 /* Localizable.strings in Resources */,
 				CEFE6C8F1FB36C7100EA3CC3 /* SSGameContainerViewController.xib in Resources */,
 				CEFE6C5F1FB0EE1700EA3CC3 /* LaunchScreen.storyboard in Resources */,
+				A5D33CDC1FB8E1890039BB79 /* SSRulesViewController.xib in Resources */,
 				AC4366A51FB4DD3700A5A9E1 /* words.json in Resources */,
 				CEFE6C5C1FB0EE1700EA3CC3 /* Assets.xcassets in Resources */,
 				CEFE6C5A1FB0EE1700EA3CC3 /* Main.storyboard in Resources */,
@@ -310,9 +342,13 @@
 			files = (
 				CEFE6C571FB0EE1700EA3CC3 /* ViewController.m in Sources */,
 				CEFE6C621FB0EE1700EA3CC3 /* main.m in Sources */,
+				A5D33CEA1FBA38BA0039BB79 /* VLDContextSheet.m in Sources */,
+				A5D33CE81FBA38BA0039BB79 /* VLDContextSheetItemView.m in Sources */,
 				CEFE6C871FB0F41E00EA3CC3 /* SSGameSession.m in Sources */,
 				CEFE6C541FB0EE1700EA3CC3 /* AppDelegate.m in Sources */,
+				A5D33CE91FBA38BA0039BB79 /* VLDContextSheetItem.m in Sources */,
 				CEFE6C8E1FB36C7100EA3CC3 /* SSGameContainerViewController.m in Sources */,
+				A5D33CDB1FB8E1890039BB79 /* SSRulesViewController.m in Sources */,
 				CEFE6C8A1FB0F47400EA3CC3 /* SSPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,6 +531,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XE2U8LQ2RB;
 				INFOPLIST_FILE = SecretSpy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SecretSpy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -509,6 +546,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XE2U8LQ2RB;
 				INFOPLIST_FILE = SecretSpy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SecretSpy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -522,6 +560,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SecretSpyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SecretSpyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -536,6 +575,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SecretSpyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SecretSpyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -549,6 +589,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SecretSpyUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SecretSpyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -562,6 +603,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SecretSpyUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SecretSpyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
