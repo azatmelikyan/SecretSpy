@@ -22,7 +22,7 @@
 
 @implementation SSGameSession
 
-- (instancetype)initWithPlayersCount:(NSUInteger)playersCount spyCount:(NSUInteger)spyCount {
+- (instancetype)initWithPlayersCount:(NSUInteger)playersCount spyCount:(NSUInteger)spyCount timeInMinutes:(NSUInteger)time {
     self = [super init];
     if (self) {
         self.players = [NSMutableArray new];
@@ -31,6 +31,7 @@
         self.currentPlayerIndex = 0;
         int randomIndex = arc4random() % self.wordsArray.count;
         self.placeWord = NSLocalizedString(self.wordsArray[randomIndex], nil);
+        self.timeInterval = time * 60;
         [self setup];
     }
     return self;
