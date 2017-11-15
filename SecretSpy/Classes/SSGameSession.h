@@ -17,10 +17,12 @@
 @property (nonatomic, readonly) NSString *placeWord;
 @property (nonatomic, readonly) NSDate *startTime;
 @property (nonatomic, readonly) NSUInteger currentPlayerIndex;
+@property (nonatomic) NSUInteger timeInterval;
+
 
 - (NSString *)nextWord;
 
-- (instancetype)initWithPlayersCount:(NSUInteger)playersCount spyCount:(NSUInteger)spyCount;
+- (instancetype)initWithPlayersCount:(NSUInteger)playersCount spyCount:(NSUInteger)spyCount timeInMinutes:(NSUInteger)time;
 
 - (void)startTimer;
 

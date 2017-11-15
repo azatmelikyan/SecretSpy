@@ -16,6 +16,7 @@
 
 @property (nonatomic) NSUInteger playersCount;
 @property (nonatomic) NSUInteger spyCount;
+@property (nonatomic) NSUInteger timeInterval;
 
 @end
 
@@ -26,6 +27,7 @@
     [self.startGameButton setTitle:NSLocalizedString(@"start_game", nil) forState:UIControlStateNormal];
     self.playersCount = 4;
     self.spyCount = 1;
+    self.timeInterval = 4;
     self.playersCountLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.playersCount];
     self.spyCountLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.spyCount];
     // Do any additional setup after loading the view, typically from a nib.
@@ -37,7 +39,7 @@
 }
 
 - (IBAction)startGameClick:(id)sender {
-    SSGameSession *gameSession = [[SSGameSession alloc] initWithPlayersCount:self.playersCount spyCount:self.spyCount];
+    SSGameSession *gameSession = [[SSGameSession alloc] initWithPlayersCount:self.playersCount spyCount:self.spyCount timeInMinutes:self.timeInterval];
     SSGameContainerViewController *vc = [[SSGameContainerViewController alloc] initWithGameSession:gameSession];
     [self presentViewController:vc animated:YES completion:nil];
 }

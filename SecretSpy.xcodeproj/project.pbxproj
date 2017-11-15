@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC4366A51FB4DD3700A5A9E1 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = AC4366A41FB4DD3700A5A9E1 /* words.json */; };
+		CE43869D1FBA225D004E53ED /* SSTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = CE43869C1FBA225D004E53ED /* SSTimer.m */; };
 		CEFE6C541FB0EE1700EA3CC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFE6C531FB0EE1700EA3CC3 /* AppDelegate.m */; };
 		CEFE6C571FB0EE1700EA3CC3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFE6C561FB0EE1700EA3CC3 /* ViewController.m */; };
 		CEFE6C5A1FB0EE1700EA3CC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFE6C581FB0EE1700EA3CC3 /* Main.storyboard */; };
@@ -42,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		AC4366A41FB4DD3700A5A9E1 /* words.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
+		CE43869B1FBA225D004E53ED /* SSTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSTimer.h; sourceTree = "<group>"; };
+		CE43869C1FBA225D004E53ED /* SSTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSTimer.m; sourceTree = "<group>"; };
 		CEFE6C4F1FB0EE1700EA3CC3 /* SecretSpy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretSpy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFE6C521FB0EE1700EA3CC3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CEFE6C531FB0EE1700EA3CC3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -166,6 +169,8 @@
 				CEFE6C8B1FB36C7100EA3CC3 /* SSGameContainerViewController.h */,
 				CEFE6C8C1FB36C7100EA3CC3 /* SSGameContainerViewController.m */,
 				CEFE6C8D1FB36C7100EA3CC3 /* SSGameContainerViewController.xib */,
+				CE43869B1FBA225D004E53ED /* SSTimer.h */,
+				CE43869C1FBA225D004E53ED /* SSTimer.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE43869D1FBA225D004E53ED /* SSTimer.m in Sources */,
 				CEFE6C571FB0EE1700EA3CC3 /* ViewController.m in Sources */,
 				CEFE6C621FB0EE1700EA3CC3 /* main.m in Sources */,
 				CEFE6C871FB0F41E00EA3CC3 /* SSGameSession.m in Sources */,

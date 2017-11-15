@@ -13,7 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *wordLabel;
 @property (weak, nonatomic) IBOutlet UIButton *showAndHideButton;
 @property (nonatomic) NSTimer *timer;
-@property (nonatomic) int remainingCounts;
+@property (nonatomic) NSUInteger remainingCounts;
 
 
 @property (nonatomic) SSGameSession *gameSession;
@@ -26,17 +26,19 @@
     self = [super init];
     if (self) {
         self.gameSession = session;
-        self.remainingCounts = 70;
+        self.remainingCounts = session.timeInterval;
     }
     return self;
 }
 
 - (void)countDown {
-    if (--self.remainingCounts == 0) {
+    if (self.remainingCounts-- == -1) {
+        self.wordLabel.text = @"Time is out";
         [self.timer invalidate];
+        return;
     }
-    int minutes = self.remainingCounts / 60;
-    int seconds = self.remainingCounts % 60;
+    int minutes = (int)self.remainingCounts / 60;
+    int seconds = (int)self.remainingCounts % 60;
     self.wordLabel.text = [NSString stringWithFormat:@"%i : %i", minutes, seconds];
 }
 
@@ -58,28 +60,38 @@
 
 - (IBAction)showAndHideClick:(UIButton *)sender {
 
-    self.wordLabel.hidden = !self.wordLabel.hidden;
-    
-    if (self.wordLabel.hidden) {
+    if (!self.wordLabel.hidden) {
         if (self.gameSession.currentPlayerIndex == self.gameSession.players.count) {
-            self.playerLabel.text = @"Timer";
+            self.playerLabel.text = @"Ready to Start";
             [sender setTitle:@"Start Timer" forState:UIControlStateNormal];
-            self.timer = [NSTimer scheduledTimerWithTimeInterval:2
+            self.wordLabel.hidden = YES;
+            
+            return;
+        }
+        [sender setTitle:@"Show" forState:UIControlStateNormal];
+        self.playerLabel.text = [NSString stringWithFormat:@"Player %lu",(unsigned long)self.gameSession.currentPlayerIndex + 1];
+        self.wordLabel.text = [self.gameSession nextWord];
+        self.wordLabel.hidden = !self.wordLabel.hidden;
+    } else {
+        if ([sender.titleLabel.text isEqualToString:@"Start Timer"]) {
+            self.timer = [NSTimer scheduledTimerWithTimeInterval:1
                                                           target:self
                                                         selector:@selector(countDown)
                                                         userInfo:nil
                                                          repeats:YES];
-            self.wordLabel.hidden = NO;
+            
             sender.hidden = YES;
+            self.wordLabel.hidden = NO;
             return;
         }
         
-        [sender setTitle:@"Show" forState:UIControlStateNormal];
-        self.playerLabel.text = [NSString stringWithFormat:@"Player %lu",(unsigned long)self.gameSession.currentPlayerIndex + 1];
-        self.wordLabel.text = [self.gameSession nextWord];
-    } else {
         [sender setTitle:@"Hide" forState:UIControlStateNormal];
+        self.wordLabel.hidden = !self.wordLabel.hidden;
+
     }
+    
+    
+
 }
 
 /*
