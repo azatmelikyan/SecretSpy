@@ -59,7 +59,19 @@
 
 
 - (IBAction)showAndHideClick:(UIButton *)sender {
-
+    if ([sender.titleLabel.text isEqualToString:@"Show the result"]) {
+        NSArray *result = [self.gameSession finishGame];
+        NSString *reslutString = @"";
+        for (int i = 0; i < result.count; i++) {
+            NSNumber *index = result[i];
+            int i = [index intValue] + 1;
+            reslutString = [reslutString stringByAppendingString:[NSString stringWithFormat:@"  %i", i]];
+        }
+        self.wordLabel.text = [NSString stringWithFormat:@"Spy index: %@", reslutString];
+        [self.timer invalidate];
+        sender.hidden = YES;
+        return;
+    }
     if (!self.wordLabel.hidden) {
         if (self.gameSession.currentPlayerIndex == self.gameSession.players.count) {
             self.playerLabel.text = @"Ready to Start";
@@ -80,8 +92,11 @@
                                                         userInfo:nil
                                                          repeats:YES];
             
-            sender.hidden = YES;
+//            sender.hidden = YES;
             self.wordLabel.hidden = NO;
+            [self countDown];
+            
+            [sender setTitle:@"Show the result" forState:UIControlStateNormal];
             return;
         }
         

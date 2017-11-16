@@ -17,6 +17,7 @@
 @property (nonatomic, readwrite) NSUInteger currentPlayerIndex;
 @property (nonatomic, readwrite) NSUInteger playersCount;
 @property (nonatomic) NSArray *wordsArray;
+@property (nonatomic) NSArray *spyIndecies;
 
 @end
 
@@ -51,6 +52,7 @@
         player.isSpy = [spyIndexes containsObject:@(i)];
         self.players[i] = player;
     }
+    self.spyIndecies = spyIndexes;
 }
 
 - (NSString *)nextWord {
@@ -72,8 +74,8 @@
     
 }
 
-- (void)finishGame {
-    
+- (NSArray *)finishGame {
+    return self.spyIndecies;
 }
 
 - (NSArray *)results {

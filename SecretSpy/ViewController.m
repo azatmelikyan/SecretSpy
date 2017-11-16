@@ -33,6 +33,8 @@
     [self setup];
     [self createContextSheet];
     [self.startGameButton setTitle:NSLocalizedString(@"start_game", nil) forState:UIControlStateNormal];
+    self.startGameButton.layer.borderWidth = 3;
+    self.startGameButton.layer.borderColor = [UIColor grayColor].CGColor;
     self.playersCount = 4;
     self.spyCount = 1;
     self.timeInterval = 4;

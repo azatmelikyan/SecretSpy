@@ -28,7 +28,7 @@
 
 - (void)pouseGame;
 
-- (void)finishGame;
+- (NSArray *)finishGame;
 
 - (NSArray *)results;
 

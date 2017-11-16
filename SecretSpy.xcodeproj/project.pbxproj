@@ -197,14 +197,11 @@
 				CEFE6C8B1FB36C7100EA3CC3 /* SSGameContainerViewController.h */,
 				CEFE6C8C1FB36C7100EA3CC3 /* SSGameContainerViewController.m */,
 				CEFE6C8D1FB36C7100EA3CC3 /* SSGameContainerViewController.xib */,
-<<<<<<< HEAD
 				A5D33CD81FB8E1890039BB79 /* SSRulesViewController.h */,
 				A5D33CD91FB8E1890039BB79 /* SSRulesViewController.m */,
 				A5D33CDA1FB8E1890039BB79 /* SSRulesViewController.xib */,
-=======
 				CE43869B1FBA225D004E53ED /* SSTimer.h */,
 				CE43869C1FBA225D004E53ED /* SSTimer.m */,
->>>>>>> origin/master
 			);
 			path = Classes;
 			sourceTree = "<group>";
