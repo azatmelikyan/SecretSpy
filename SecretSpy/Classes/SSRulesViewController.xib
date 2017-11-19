@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info_page_bg_back" translatesAutoresizingMaskIntoConstraints="NO" id="okh-5N-eF3">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info_page_center" translatesAutoresizingMaskIntoConstraints="NO" id="okh-5N-eF3">
                     <rect key="frame" x="57" y="408" width="260" height="130"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="130" id="c2H-RC-I9i"/>
@@ -82,7 +82,7 @@
     <resources>
         <image name="icon_back" width="47" height="47"/>
         <image name="info_bootom_page" width="1080" height="560"/>
-        <image name="info_page_bg_back" width="1080" height="1169"/>
+        <image name="info_page_center" width="1080" height="1170"/>
         <image name="info_top_page" width="1080" height="767"/>
     </resources>
 </document>
