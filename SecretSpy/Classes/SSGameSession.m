@@ -7,6 +7,7 @@
 //
 
 #import "SSGameSession.h"
+#import "SSLanguageManager.h"
 
 @interface SSGameSession ()
 
@@ -31,7 +32,7 @@
         self.spyCount = spyCount;
         self.currentPlayerIndex = 0;
         int randomIndex = arc4random() % self.wordsArray.count;
-        self.placeWord = NSLocalizedString(self.wordsArray[randomIndex], nil);
+        self.placeWord = [[SSLanguageManager sharedInstance] localizedString:self.wordsArray[randomIndex]];
         self.timeInterval = time * 60;
         [self setup];
     }
@@ -60,7 +61,7 @@
         return nil;
     }
     if (self.players[self.currentPlayerIndex++].isSpy) {
-        return @"Spy";
+        return [[SSLanguageManager sharedInstance] localizedString:@"spy"];
     } else {
         return self.placeWord;
     }

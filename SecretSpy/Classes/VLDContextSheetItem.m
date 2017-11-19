@@ -11,7 +11,8 @@
 
 - (id) initWithTitle: (NSString *) title
                image: (UIImage *) image
-    highlightedImage: (UIImage *) highlightedImage {
+    highlightedImage: (UIImage *) highlightedImage
+        languageCode: (NSString *) languageCode {
     
     self = [super init];
     
@@ -20,6 +21,7 @@
         _image = image;
         _highlightedImage = highlightedImage;
         _enabled = YES;
+        _languageCode = languageCode;
     }
     
     return self;

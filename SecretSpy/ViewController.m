@@ -11,6 +11,7 @@
 #import "SSRulesViewController.h"
 #import "VLDContextSheet.h"
 #import "VLDContextSheetItem.h"
+#import "SSLanguageManager.h"
 
 @interface ViewController () <VLDContextSheetDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *startGameButton;
@@ -32,7 +33,7 @@
     [super viewDidLoad];
     [self setup];
     [self createContextSheet];
-    [self.startGameButton setTitle:NSLocalizedString(@"start_game", nil) forState:UIControlStateNormal];
+    [self.startGameButton setTitle:[[SSLanguageManager sharedInstance] localizedString:@"start_game"] forState:UIControlStateNormal];
     self.startGameButton.layer.borderWidth = 3;
     self.startGameButton.layer.borderColor = [UIColor grayColor].CGColor;
     self.playersCount = 4;
@@ -40,6 +41,8 @@
     self.timeInterval = 4;
     self.playersCountLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.playersCount];
     self.spyCountLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.spyCount];
+    [self setupLanguge];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleLanguageChange:) name:kSCNotificationLanguageChanged object:nil];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -102,33 +105,42 @@
 - (void)createContextSheet {
     VLDContextSheetItem *item1 = [[VLDContextSheetItem alloc] initWithTitle: @"English"
                                                                       image: [UIImage imageNamed: @"ic_flag_england"]
-                                                           highlightedImage: [UIImage imageNamed: @"ic_flag_england"]];
+                                                           highlightedImage: [UIImage imageNamed: @"ic_flag_england"]
+                                                               languageCode: kSCEnglish];
     
     
     VLDContextSheetItem *item2 = [[VLDContextSheetItem alloc] initWithTitle: @"Armenian"
                                                                       image: [UIImage imageNamed: @"ic_flag_armenia"]
-                                                           highlightedImage: [UIImage imageNamed: @"ic_flag_armenia"]];
+                                                           highlightedImage: [UIImage imageNamed: @"ic_flag_armenia"]
+                                                               languageCode: kSCArmenian];
     
     VLDContextSheetItem *item3 = [[VLDContextSheetItem alloc] initWithTitle: @"Russian"
                                                                       image: [UIImage imageNamed: @"ic_flag_russia"]
-                                                           highlightedImage: [UIImage imageNamed: @"ic_flag_russia"]];
+                                                           highlightedImage: [UIImage imageNamed: @"ic_flag_russia"]
+                                                               languageCode: kSCRussian];
     
     self.contextSheet = [[VLDContextSheet alloc] initWithItems: @[ item1, item2, item3 ]];
     self.contextSheet.delegate = self;
-    UIGestureRecognizer *gestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget: self
-                                                                                           action: @selector(longPressed:)];
-    [self.languageContainerView addGestureRecognizer: gestureRecognizer];
+    UIGestureRecognizer *longpressRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget: self
+                                                                                           action: @selector(gestureHandler:)];
+    UIGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget: self
+                                                                                           action: @selector(gestureHandler:)];
+    [self.languageContainerView addGestureRecognizer:longpressRecognizer];
+    [self.languageContainerView addGestureRecognizer:tapRecognizer];
 }
 
 - (void)contextSheet:(VLDContextSheet *)contextSheet didSelectItem:(VLDContextSheetItem *)item {
+    
+    [[SSLanguageManager sharedInstance] setSelectedLanguage:item.languageCode];
     [self.currentLanguageImageView setImage:item.image];
 }
 
-- (void) longPressed: (UIGestureRecognizer *) gestureRecognizer {
+- (void)gestureHandler:(UIGestureRecognizer *) gestureRecognizer {
+   
     if(gestureRecognizer.state == UIGestureRecognizerStateBegan) {
-        
         [self.contextSheet startWithGestureRecognizer: gestureRecognizer
                                                inView: self.view];
+       
     }
 }
 
@@ -137,5 +149,24 @@
                                                   forBarMetrics:UIBarMetricsDefault]; //UIImageNamed:@"transparent.png"
     [UINavigationBar appearance].shadowImage = [UIImage new];////UIImageNamed:@"transparent.png"
     [UINavigationBar appearance].translucent = YES;
+}
+
+- (void)setupLanguge {
+  NSString *selectedLanguage = [[[NSUserDefaults standardUserDefaults] objectForKey:kSCLanguageKey] description];
+    if ([selectedLanguage isEqualToString:kSCRussian]) {
+        [self.currentLanguageImageView setImage:[UIImage imageNamed: @"ic_flag_russia"]];
+    } else if ([selectedLanguage isEqualToString:kSCArmenian]) {
+        [self.currentLanguageImageView setImage:[UIImage imageNamed: @"ic_flag_armenia"]];
+    } else {
+        [self.currentLanguageImageView setImage:[UIImage imageNamed: @"ic_flag_england"]];
+    }
+}
+
+- (void)handleLanguageChange:(NSNotification *)notification {
+    [self.startGameButton setTitle:[[SSLanguageManager sharedInstance] localizedString:@"start_game"] forState:UIControlStateNormal];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 @end
