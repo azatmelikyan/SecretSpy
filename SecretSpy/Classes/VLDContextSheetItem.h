@@ -12,11 +12,13 @@
 
 - (id) initWithTitle: (NSString *) title
                image: (UIImage *) image
-    highlightedImage: (UIImage *) highlightedImage;
+    highlightedImage: (UIImage *) highlightedImage
+        languageCode: (NSString *) languageCode;
 
 @property (strong, readonly) NSString *title;
 @property (strong, readonly) UIImage *image;
 @property (strong, readonly) UIImage *highlightedImage;
+@property (nonatomic) NSString *languageCode;
 
 @property (assign, readwrite, getter = isEnabled) BOOL enabled;
 

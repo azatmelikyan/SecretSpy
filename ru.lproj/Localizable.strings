@@ -5,7 +5,8 @@
   Created by User on 11/8/17.
   Copyright © 2017 User. All rights reserved.
 */
-"start_game" = "Начать игру";
+"spy" = "Шпион";
+"start_game" = "Начать";
 "airplane" = "Самолет";
 "bank" = "Банк";
 "beach" = "Пляж";
@@ -26,7 +27,6 @@
 "balcony" = "Балкон";
 "supermarket" = "Супермаркет";
 "embassy" = "Посольство";
-"army" = "Army";
 "university" = "Университет";
 "toilet" = "Туалет";
 "kitchen" = "Кухня";

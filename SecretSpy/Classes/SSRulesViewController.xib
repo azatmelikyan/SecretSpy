@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SSRulesViewController">
             <connections>
+                <outlet property="rulesText" destination="5pm-n5-chP" id="YK6-91-e1J"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,6 +20,13 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info_page_bg_back" translatesAutoresizingMaskIntoConstraints="NO" id="okh-5N-eF3">
+                    <rect key="frame" x="57" y="408" width="260" height="130"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="130" id="c2H-RC-I9i"/>
+                        <constraint firstAttribute="width" constant="260" id="p2L-9T-87p"/>
+                    </constraints>
+                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info_top_page" translatesAutoresizingMaskIntoConstraints="NO" id="upo-Im-yC6">
                     <rect key="frame" x="0.0" y="20" width="375" height="260"/>
                     <constraints>
@@ -28,8 +36,8 @@
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5pm-n5-chP">
                     <rect key="frame" x="0.0" y="280" width="375" height="387"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.                                   </mutableString>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.                                   </string>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbG-ld-Lzr">
@@ -58,8 +66,10 @@
                 <constraint firstItem="5pm-n5-chP" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Dgu-fB-ZI3"/>
                 <constraint firstItem="5pm-n5-chP" firstAttribute="top" secondItem="upo-Im-yC6" secondAttribute="bottom" id="H1V-Fr-gd2"/>
                 <constraint firstItem="5pm-n5-chP" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="Kg5-Is-aky"/>
+                <constraint firstItem="okh-5N-eF3" firstAttribute="centerY" secondItem="5pm-n5-chP" secondAttribute="centerY" id="Ql0-ei-KRU"/>
                 <constraint firstItem="uzA-ab-vMN" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Vif-U5-tdP"/>
                 <constraint firstItem="upo-Im-yC6" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="bRL-gf-CBi"/>
+                <constraint firstItem="okh-5N-eF3" firstAttribute="centerX" secondItem="5pm-n5-chP" secondAttribute="centerX" id="dVd-1q-eC1"/>
                 <constraint firstItem="hbG-ld-Lzr" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="dWc-HV-PYP"/>
                 <constraint firstItem="hbG-ld-Lzr" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="gUh-hd-TJo"/>
                 <constraint firstItem="uzA-ab-vMN" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="kgt-cr-iSJ"/>
@@ -72,6 +82,7 @@
     <resources>
         <image name="icon_back" width="47" height="47"/>
         <image name="info_bootom_page" width="1080" height="560"/>
+        <image name="info_page_bg_back" width="1080" height="1169"/>
         <image name="info_top_page" width="1080" height="767"/>
     </resources>
 </document>

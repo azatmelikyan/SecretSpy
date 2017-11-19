@@ -7,8 +7,10 @@
 //
 
 #import "SSRulesViewController.h"
+#import "SSLanguageManager.h"
 
 @interface SSRulesViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *rulesText;
 
 @end
 
@@ -16,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   self.rulesText.text = [[SSLanguageManager sharedInstance] localizedString:@"rules_text"];
     // Do any additional setup after loading the view from its nib.
 }
 - (IBAction)backBtnCliked:(id)sender {

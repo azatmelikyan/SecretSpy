@@ -5,7 +5,8 @@
   Created by User on 11/8/17.
   Copyright © 2017 User. All rights reserved.
 */
-"start_game" = "Սկսել խաղը";
+"spy" = "Լրտես";
+"start_game" = "Սկսել";
 "airplane" = "Ինքնաթիռ";
 "bank" = "Բանկ";
 "beach" = "Լողափ";
@@ -26,7 +27,6 @@
 "balcony" = "Պատշգամբ";
 "supermarket" = "Սուպերմարկետ";
 "embassy" = "Դեսպանատուն";
-"army" = "Բանակ";
 "university" = "Համալսարան";
 "toilet" = "Զուգարան";
 "kitchen" = "Խոհանոց";
@@ -49,3 +49,4 @@
 "pharmacy" = "Դեղատուն";
 "roof" = "Տանիք";
 "basement" = "Նկուղ";
+

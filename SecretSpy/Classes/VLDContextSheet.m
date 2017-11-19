@@ -105,7 +105,7 @@ static CGRect VLDOrientedScreenBounds() {
     _centerView.layer.cornerRadius = 25;
     _centerView.layer.borderWidth = 2;
     _centerView.layer.borderColor = [UIColor grayColor].CGColor;
-    [self addSubview: _centerView];
+  //  [self addSubview: _centerView];
 
 }
 
