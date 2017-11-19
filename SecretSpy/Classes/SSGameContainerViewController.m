@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *playerLabel;
 @property (weak, nonatomic) IBOutlet UILabel *wordLabel;
 @property (weak, nonatomic) IBOutlet UIButton *showAndHideButton;
+@property (weak, nonatomic) IBOutlet UIView *wordBackgroundView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *wordBackgroundViewHeightConstraint;
 
 
 @property (nonatomic) SSGameSession *gameSession;
@@ -36,7 +38,7 @@
     [super viewDidLoad];
     
     self.playerLabel.text = @"Player 1";
-    self.wordLabel.hidden = YES;
+//    self.wordLabel.hidden = YES;
     self.wordLabel.text = [self.gameSession nextWord];
     [self.showAndHideButton setTitle:@"Show" forState:UIControlStateNormal];
     // Do any additional setup after loading the view from its nib.
@@ -61,7 +63,7 @@
         sender.hidden = YES;
         return;
     }
-    if (!self.wordLabel.hidden) {
+    if (self.wordBackgroundViewHeightConstraint.constant != 0) {
         if (self.gameSession.currentPlayerIndex == self.gameSession.players.count) {
 //            self.playerLabel.text = @"Ready to Start";
 //            [sender setTitle:@"Start Timer" forState:UIControlStateNormal];
@@ -73,7 +75,8 @@
         [sender setTitle:@"Show" forState:UIControlStateNormal];
         self.playerLabel.text = [NSString stringWithFormat:@"Player %lu",(unsigned long)self.gameSession.currentPlayerIndex + 1];
         self.wordLabel.text = [self.gameSession nextWord];
-        self.wordLabel.hidden = !self.wordLabel.hidden;
+//        self.wordLabel.hidden = !self.wordLabel.hidden;
+        [self hide];
     } else {
         if ([sender.titleLabel.text isEqualToString:@"Start Timer"]) {
            
@@ -83,10 +86,25 @@
         }
         
         [sender setTitle:@"Hide" forState:UIControlStateNormal];
-        self.wordLabel.hidden = !self.wordLabel.hidden;
-
+//        self.wordLabel.hidden = !self.wordLabel.hidden;
+        [self show];
     }
 }
+
+- (void)hide {
+    self.wordBackgroundViewHeightConstraint.constant = 0;
+    [UIView animateWithDuration:0.3 animations:^{
+        [self.wordBackgroundView layoutIfNeeded];
+    }];
+}
+
+- (void)show {
+    self.wordBackgroundViewHeightConstraint.constant = 70;
+    [UIView animateWithDuration:0.3 animations:^{
+        [self.wordBackgroundView layoutIfNeeded];
+    }];
+}
+
 
 - (IBAction)backButtonClicked:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];

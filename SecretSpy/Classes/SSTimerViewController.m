@@ -55,4 +55,8 @@
     self.timerLabel.text = [NSString stringWithFormat:@"%i : %i", minutes, seconds];
 }
 
+- (IBAction)backButtonClicked:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 @end
