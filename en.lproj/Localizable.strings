@@ -27,7 +27,7 @@
 "supermarket" = "Supermarket";
 "embassy" = "Embassy";
 "army" = "Army";
-"university" = "university";
+"university" = "University";
 "toilet" = "Toilet";
 "kitchen" = "Kitchen";
 "ship" = "Ship";
@@ -38,13 +38,10 @@
 "dance_club" = "Dance Club";
 "night_club" = "Night Club";
 "space_station" = "Space Station";
-"cathedral" = "Cathedral";
-"pirate_ship" = "Pirate Ship";
+"church" = "Church";
 "train" = "Train";
 "police_station" = "Police Station";
 "military_base" = "Military Base";
-"ocean_liner" = "Ocean Liner";
-"movie_studio" = "Movie Studio";
 "tent" = "Tent";
 "airport" = "Airport";
 "parking" = "Parking";

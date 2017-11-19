@@ -5,4 +5,48 @@
   Created by User on 11/8/17.
   Copyright © 2017 User. All rights reserved.
 */
-"start_game" = "начать игру";
+"start_game" = "Начать игру";
+"airplane" = "Самолет";
+"bank" = "Банк";
+"beach" = "Пляж";
+"casino" = "Казино";
+"cementry" = "Кладбище";
+"theatre" = "Tеатр";
+"school" = "Школа";
+"cinema" = "Кинотеатр";
+"prison" = "Тюрьма";
+"hospital" = "Больница";
+"village" = "Деревня";
+"beauty_salon" = "Салон красоты";
+"park" = "Парк";
+"circus" = "Цирк";
+"restaurant" = "Ресторан";
+"home" = "Дом";
+"garden" = "Сад";
+"balcony" = "Балкон";
+"supermarket" = "Супермаркет";
+"embassy" = "Посольство";
+"army" = "Army";
+"university" = "Университет";
+"toilet" = "Туалет";
+"kitchen" = "Кухня";
+"ship" = "Корабль";
+"submarine" = "Подводная лодка";
+"stadium" = "Стадион";
+"bathroom" = "Ванная комната";
+"waterpark" = "Аквапарк";
+"dance_club" = "Танцевальный клуб";
+"night_club" = "Ночной клуб";
+"space_station" = "Космическая станция";
+"cathedral" = "Церковь";
+"train" = "Поезд";
+"police_station" = "Полицейский участок";
+"military_base" = "Военная база";
+"tent" = "Палатка";
+"airport" = "Аэропорт";
+"parking" = "Стоянка";
+"dental_cllinic" = "Стоматологическая клиника";
+"pharmacy" = "Аптека";
+"roof" = "Крыша";
+"basement" = "Подвал";
+
