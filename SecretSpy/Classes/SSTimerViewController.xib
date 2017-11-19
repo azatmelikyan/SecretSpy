@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -42,13 +42,19 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZQ-hZ-sT7" userLabel="Back Button">
+                    <rect key="frame" x="22" y="66" width="47" height="47"/>
+                    <state key="normal" image="icon_back"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="wfo-Uh-RgP" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="4eJ-56-rEH"/>
                 <constraint firstItem="wfo-Uh-RgP" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="50Q-SU-iSJ"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="top" secondItem="CZQ-hZ-sT7" secondAttribute="top" constant="-22" id="8g5-OL-6I7"/>
                 <constraint firstItem="wfo-Uh-RgP" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="8wv-8b-XfY"/>
                 <constraint firstItem="D1c-jS-amP" firstAttribute="centerY" secondItem="wfo-Uh-RgP" secondAttribute="centerY" id="9yn-A2-ZEI"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="leading" secondItem="CZQ-hZ-sT7" secondAttribute="leading" constant="-22" id="Ep6-Ag-RCN"/>
                 <constraint firstItem="D1c-jS-amP" firstAttribute="centerX" secondItem="wfo-Uh-RgP" secondAttribute="centerX" id="VnC-G6-3PC"/>
                 <constraint firstItem="wfo-Uh-RgP" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="cnR-Qz-wPJ"/>
             </constraints>
@@ -57,6 +63,7 @@
         </view>
     </objects>
     <resources>
+        <image name="icon_back" width="47" height="47"/>
         <image name="timer_background" width="1080" height="1920"/>
     </resources>
 </document>

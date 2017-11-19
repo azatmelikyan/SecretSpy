@@ -86,13 +86,18 @@
         self.wordLabel.hidden = !self.wordLabel.hidden;
 
     }
-    
-    
-
 }
+
 - (IBAction)backButtonClicked:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
+
+
 
 /*
 #pragma mark - Navigation
