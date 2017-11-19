@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5C2C9861FBE1952008FBBEA /* SSTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C2C9841FBE1952008FBBEA /* SSTimerViewController.m */; };
+		A5C2C9871FBE1952008FBBEA /* SSTimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C2C9851FBE1952008FBBEA /* SSTimerViewController.xib */; };
 		A5D33CDB1FB8E1890039BB79 /* SSRulesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D33CD91FB8E1890039BB79 /* SSRulesViewController.m */; };
 		A5D33CDC1FB8E1890039BB79 /* SSRulesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D33CDA1FB8E1890039BB79 /* SSRulesViewController.xib */; };
 		A5D33CE81FBA38BA0039BB79 /* VLDContextSheetItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D33CE31FBA38BA0039BB79 /* VLDContextSheetItemView.m */; };
@@ -47,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A5C2C9831FBE1952008FBBEA /* SSTimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSTimerViewController.h; sourceTree = "<group>"; };
+		A5C2C9841FBE1952008FBBEA /* SSTimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSTimerViewController.m; sourceTree = "<group>"; };
+		A5C2C9851FBE1952008FBBEA /* SSTimerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSTimerViewController.xib; sourceTree = "<group>"; };
 		A5D33CD81FB8E1890039BB79 /* SSRulesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSRulesViewController.h; sourceTree = "<group>"; };
 		A5D33CD91FB8E1890039BB79 /* SSRulesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSRulesViewController.m; sourceTree = "<group>"; };
 		A5D33CDA1FB8E1890039BB79 /* SSRulesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSRulesViewController.xib; sourceTree = "<group>"; };
@@ -202,6 +207,9 @@
 				A5D33CDA1FB8E1890039BB79 /* SSRulesViewController.xib */,
 				CE43869B1FBA225D004E53ED /* SSTimer.h */,
 				CE43869C1FBA225D004E53ED /* SSTimer.m */,
+				A5C2C9831FBE1952008FBBEA /* SSTimerViewController.h */,
+				A5C2C9841FBE1952008FBBEA /* SSTimerViewController.m */,
+				A5C2C9851FBE1952008FBBEA /* SSTimerViewController.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -314,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5C2C9871FBE1952008FBBEA /* SSTimerViewController.xib in Resources */,
 				CEFE6C961FB38C5F00EA3CC3 /* Localizable.strings in Resources */,
 				CEFE6C8F1FB36C7100EA3CC3 /* SSGameContainerViewController.xib in Resources */,
 				CEFE6C5F1FB0EE1700EA3CC3 /* LaunchScreen.storyboard in Resources */,
@@ -349,6 +358,7 @@
 				CEFE6C571FB0EE1700EA3CC3 /* ViewController.m in Sources */,
 				CEFE6C621FB0EE1700EA3CC3 /* main.m in Sources */,
 				A5D33CEA1FBA38BA0039BB79 /* VLDContextSheet.m in Sources */,
+				A5C2C9861FBE1952008FBBEA /* SSTimerViewController.m in Sources */,
 				A5D33CE81FBA38BA0039BB79 /* VLDContextSheetItemView.m in Sources */,
 				CEFE6C871FB0F41E00EA3CC3 /* SSGameSession.m in Sources */,
 				CEFE6C541FB0EE1700EA3CC3 /* AppDelegate.m in Sources */,

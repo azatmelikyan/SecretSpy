@@ -19,35 +19,59 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oWU-bs-4ug">
-                    <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                    <items>
-                        <navigationItem title="Rules" id="HKu-0C-FFg">
-                            <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Hfs-oA-NwN">
-                                <connections>
-                                    <action selector="backBtnCliked:" destination="-1" id="TOG-LK-AwJ"/>
-                                </connections>
-                            </barButtonItem>
-                        </navigationItem>
-                    </items>
-                </navigationBar>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5pm-n5-chP">
-                    <rect key="frame" x="0.0" y="235" width="375" height="432"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info_top_page" translatesAutoresizingMaskIntoConstraints="NO" id="upo-Im-yC6">
+                    <rect key="frame" x="0.0" y="20" width="375" height="260"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="260" id="tJW-hq-rDb"/>
+                    </constraints>
+                </imageView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5pm-n5-chP">
+                    <rect key="frame" x="0.0" y="280" width="375" height="387"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.                                   </mutableString>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbG-ld-Lzr">
+                    <rect key="frame" x="0.0" y="20" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="euN-Ch-qst"/>
+                        <constraint firstAttribute="height" constant="44" id="tlR-WC-aSd"/>
+                    </constraints>
+                    <state key="normal" image="icon_back"/>
+                    <connections>
+                        <action selector="backBtnCliked:" destination="-1" eventType="touchUpInside" id="37V-DW-CYG"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info_bootom_page" translatesAutoresizingMaskIntoConstraints="NO" id="uzA-ab-vMN">
+                    <rect key="frame" x="0.0" y="507" width="375" height="160"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" id="hnu-4h-uXY"/>
+                    </constraints>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" red="1" green="0.96563224385677282" blue="0.19725088611035113" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="oWU-bs-4ug" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="Ql7-fw-Mjn"/>
-                <constraint firstItem="oWU-bs-4ug" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="SKL-BG-QMx"/>
-                <constraint firstItem="oWU-bs-4ug" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="SOl-h9-VgY"/>
+                <constraint firstItem="5pm-n5-chP" firstAttribute="bottom" secondItem="uzA-ab-vMN" secondAttribute="bottom" id="666-gx-g7X"/>
+                <constraint firstItem="upo-Im-yC6" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="8ut-d1-0bU"/>
+                <constraint firstItem="upo-Im-yC6" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="BVZ-eT-HId"/>
+                <constraint firstItem="5pm-n5-chP" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Dgu-fB-ZI3"/>
+                <constraint firstItem="5pm-n5-chP" firstAttribute="top" secondItem="upo-Im-yC6" secondAttribute="bottom" id="H1V-Fr-gd2"/>
+                <constraint firstItem="5pm-n5-chP" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="Kg5-Is-aky"/>
+                <constraint firstItem="uzA-ab-vMN" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Vif-U5-tdP"/>
+                <constraint firstItem="upo-Im-yC6" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="bRL-gf-CBi"/>
+                <constraint firstItem="hbG-ld-Lzr" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="dWc-HV-PYP"/>
+                <constraint firstItem="hbG-ld-Lzr" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="gUh-hd-TJo"/>
+                <constraint firstItem="uzA-ab-vMN" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="kgt-cr-iSJ"/>
+                <constraint firstItem="uzA-ab-vMN" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="xEX-3U-zYU"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="91.5" y="54.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="icon_back" width="47" height="47"/>
+        <image name="info_bootom_page" width="1080" height="560"/>
+        <image name="info_top_page" width="1080" height="767"/>
+    </resources>
 </document>
