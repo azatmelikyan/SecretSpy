@@ -40,7 +40,9 @@
     self.playerLabel.text = @"Player 1";
 //    self.wordLabel.hidden = YES;
     self.wordLabel.text = [self.gameSession nextWord];
+
     [self.showAndHideButton setTitle:@"Show" forState:UIControlStateNormal];
+    self.wordBackgroundViewHeightConstraint.constant = 0;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -94,14 +96,14 @@
 - (void)hide {
     self.wordBackgroundViewHeightConstraint.constant = 0;
     [UIView animateWithDuration:0.3 animations:^{
-        [self.wordBackgroundView layoutIfNeeded];
+        [self.view layoutIfNeeded];
     }];
 }
 
 - (void)show {
     self.wordBackgroundViewHeightConstraint.constant = 70;
     [UIView animateWithDuration:0.3 animations:^{
-        [self.wordBackgroundView layoutIfNeeded];
+        [self.view layoutIfNeeded];
     }];
 }
 
