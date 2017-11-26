@@ -13,15 +13,17 @@
 @property (nonatomic) NSTimer *timer;
 @property (nonatomic) NSUInteger remainingCounts;
 @property (weak, nonatomic) IBOutlet UILabel *timerLabel;
+@property (nonatomic) NSArray *results;
 
 @end
 
 @implementation SSTimerViewController
 
-- (instancetype)initWithTimeInterval:(NSUInteger)timeInterval {
+- (instancetype)initWithTimeInterval:(NSUInteger)timeInterval spyIndexes:(NSArray *)spyIndexes{
     self = [self init];
     if (self) {
         self.remainingCounts = timeInterval;
+        self.results = spyIndexes;
     }
     return self;
 }
