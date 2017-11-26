@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
-@interface SSRulesViewController : ViewController
+
+@interface SSRulesViewController : UIViewController
+
 
 @end
