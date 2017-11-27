@@ -88,6 +88,16 @@
     }];
     return spys;
 }
+
+- (NSString *)resultsString {
+    NSString __block *indexes = @"";
+    [self.players enumerateObjectsUsingBlock:^(SSPlayer * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (obj.isSpy) {
+            indexes = [indexes stringByAppendingString:[NSString stringWithFormat:@"%lu ", (unsigned long)idx + 1]];
+        }
+    }];
+    return [@"Spy: " stringByAppendingString:indexes];
+}
     
 - (NSArray *)wordsArray {
     if (_wordsArray) {

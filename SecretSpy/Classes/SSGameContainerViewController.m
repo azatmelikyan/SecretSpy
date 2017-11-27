@@ -70,7 +70,7 @@
 //            self.playerLabel.text = @"Ready to Start";
 //            [sender setTitle:@"Start Timer" forState:UIControlStateNormal];
 //            self.wordLabel.hidden = YES;
-            SSTimerViewController *timerController = [[SSTimerViewController alloc] initWithTimeInterval:self.gameSession.timeInterval spyIndexes:[self.gameSession results]];
+            SSTimerViewController *timerController = [[SSTimerViewController alloc] initWithTimeInterval:self.gameSession.timeInterval resultString:[self.gameSession resultsString]];
             [self.navigationController pushViewController:timerController animated:YES];
             return;
         }

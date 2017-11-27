@@ -9,5 +9,5 @@
 #import "ViewController.h"
 
 @interface SSTimerViewController : ViewController
-- (instancetype)initWithTimeInterval:(NSUInteger)timeInterval spyIndexes:(NSArray *)spyIndexes;
+- (instancetype)initWithTimeInterval:(NSUInteger)timeInterval resultString:(NSString *)resultString;
 @end

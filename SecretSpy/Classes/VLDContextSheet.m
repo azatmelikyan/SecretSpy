@@ -88,13 +88,15 @@ static CGRect VLDOrientedScreenBounds() {
     _backgroundView = [[UIView alloc] initWithFrame: CGRectZero];
     _backgroundView.backgroundColor = [UIColor colorWithWhite: 0 alpha: 0.6];
     [self addSubview: self.backgroundView];
-    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backgroundTapped:)];
+    [self.backgroundView addGestureRecognizer:tap];
     _itemViews = [[NSMutableArray alloc] init];
     
     for(VLDContextSheetItem *item in _items) {
         VLDContextSheetItemView *itemView = [[VLDContextSheetItemView alloc] init];
         itemView.item = item;
-        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(itemTapped:)];
+        [itemView addGestureRecognizer:tap];
         [self addSubview: itemView];
         [(NSMutableArray *) _itemViews addObject: itemView];
     }
@@ -386,5 +388,37 @@ static CGRect VLDOrientedScreenBounds() {
     
     [self closeItemsToCenterView];
 }
+
+
+
+
+
+
+
+
+
+- (void)itemTapped:(UIGestureRecognizer *)gesture {
+    VLDContextSheetItemView *itemView = (VLDContextSheetItemView *)gesture.view;
+
+    if(itemView != self.selectedItemView) {
+        [self.selectedItemView setHighlighted: NO animated: YES];
+        
+        [self updateItemView: self.selectedItemView
+               touchDistance: 0.0
+                    animated: YES];
+        
+        [self bringSubviewToFront: itemView];
+    }
+    
+    [itemView setHighlighted: YES animated: YES];
+    
+    self.selectedItemView = itemView;
+    
+    [self end];
+}
+- (void)backgroundTapped:(UIGestureRecognizer *)gesture {
+    [self end];
+}
+
 
 @end

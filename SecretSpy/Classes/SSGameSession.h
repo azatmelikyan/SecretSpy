@@ -32,4 +32,6 @@
 
 - (NSArray *)results;
 
+- (NSString *)resultsString;
+
 @end

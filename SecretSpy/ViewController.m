@@ -38,7 +38,7 @@
     self.startGameButton.layer.borderColor = [UIColor grayColor].CGColor;
     self.playersCount = 4;
     self.spyCount = 1;
-    self.timeInterval = 4;
+    self.timeInterval = 7;
     self.playersCountLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.playersCount];
     self.spyCountLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.spyCount];
     [self setupLanguge];
@@ -137,7 +137,7 @@
 
 - (void)gestureHandler:(UIGestureRecognizer *) gestureRecognizer {
    
-    if(gestureRecognizer.state == UIGestureRecognizerStateBegan) {
+    if(gestureRecognizer.state == UIGestureRecognizerStateBegan || gestureRecognizer.state == UIGestureRecognizerStateRecognized) {
         [self.contextSheet startWithGestureRecognizer: gestureRecognizer
                                                inView: self.view];
        
