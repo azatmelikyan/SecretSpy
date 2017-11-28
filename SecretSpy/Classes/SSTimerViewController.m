@@ -8,8 +8,9 @@
 
 #import "SSTimerViewController.h"
 #import "ViewController.h"
+@import GoogleMobileAds;
 
-@interface SSTimerViewController ()
+@interface SSTimerViewController () <GADBannerViewDelegate, GADInterstitialDelegate>
 
 @property (nonatomic) NSTimer *timer;
 @property (nonatomic) NSUInteger remainingCounts;
@@ -17,6 +18,10 @@
 @property (nonatomic) NSString *resultString;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *timerLabelHeightConstraint;
 @property (weak, nonatomic) IBOutlet UIButton *startAndResultButton;
+@property (weak, nonatomic) IBOutlet UIView *bannerView;
+
+@property (nonatomic) GADBannerView *adBannerView;
+@property (nonatomic) GADInterstitial *adFullBannerView;
 
 @end
 
@@ -34,9 +39,49 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.timerLabelHeightConstraint.constant = 0;
-
+    [self setupAds];
     
     // Do any additional setup after loading the view from its nib.
+}
+- (void)setupAds {
+    GADRequest *request = [GADRequest request];
+    request.testDevices = @[ kGADSimulatorID,                       // All simulators
+                             @"9f65636828e14ea35a25f2a516c3c81b" ]; // Sample device ID
+    [self.adBannerView loadRequest:request];
+    GADRequest *requestForFll = [GADRequest request];
+    requestForFll.testDevices = @[ kGADSimulatorID,                       // All simulators
+                                   @"9f65636828e14ea35a25f2a516c3c81b" ]; // Sample device ID
+    self.adFullBannerView = [self createAndLoadInterstitial];
+    [self.adFullBannerView loadRequest:requestForFll];
+}
+
+- (GADBannerView *)adBannerView {
+    if (!_adBannerView) {
+        _adBannerView = [[GADBannerView alloc] init];
+        [_adBannerView setAdSize:kGADAdSizeSmartBannerLandscape];
+        _adBannerView.adUnitID = @"ca-app-pub-8490603098673718/2921064708";
+        _adBannerView.delegate = self;
+        _adBannerView.rootViewController = self;
+    }
+    return _adBannerView;
+}
+
+- (GADInterstitial *)createAndLoadInterstitial {
+    GADInterstitial *interstitial =
+    [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-8490603098673718/4778492739"];
+    interstitial.delegate = self;
+    [interstitial loadRequest:[GADRequest request]];
+    return interstitial;
+}
+
+- (void)presentFullScreenAd {
+    if (self.adFullBannerView.isReady) {
+        [self.adFullBannerView presentFromRootViewController:self];
+    }
+    GADRequest *requestForFll = [GADRequest request];
+    requestForFll.testDevices = @[ kGADSimulatorID,                       // All simulators
+                                   @"9f65636828e14ea35a25f2a516c3c81b" ]; // Sample device ID
+    [self.adFullBannerView loadRequest:requestForFll];
 }
 
 - (IBAction)startTimer:(id)sender {
@@ -91,11 +136,8 @@
                                style:UIAlertActionStyleDefault
                                handler:^(UIAlertAction *action)
                                {
-                                   [self.navigationController.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                                       if ([obj isKindOfClass:[ViewController class]]) {
-                                           [self.navigationController popToViewController:obj animated:YES];
-                                       }
-                                   }];
+                                   [self presentFullScreenAd];
+
                                }];
     [self showPopUpWithActions:@[cancelAction, okAction] title:@"Close the game" message:@"Are you sure you want close the game?"];
 }
@@ -139,6 +181,30 @@
                                    self.startAndResultButton.hidden = YES;
                                }];
     [self showPopUpWithActions:@[cancelAction, okAction] title:@"Show Spy index" message:@"Are You sure you discovered the spy?"];
+}
+
+
+#pragma mark - GADBannerViewDelegate
+
+
+- (void)adViewDidReceiveAd:(GADBannerView *)bannerView {
+    bannerView.frame = CGRectMake(0, 0, self.bannerView.frame.size.width, self.bannerView.frame.size.height);
+    [self.bannerView addSubview:bannerView];
+}
+
+- (void)adView:(GADBannerView *)bannerView didFailToReceiveAdWithError:(GADRequestError *)error {
+    NSLog(@"error %@", error.description);
+}
+
+#pragma mark - GADBannerViewDelegate
+
+- (void)interstitialDidDismissScreen:(GADInterstitial *)ad {
+    [self.navigationController.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj isKindOfClass:[ViewController class]]) {
+            [self.navigationController popToViewController:obj animated:YES];
+        }
+    }];
+    self.adFullBannerView = [self createAndLoadInterstitial];
 }
 
 @end
