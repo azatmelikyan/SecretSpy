@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C4a-zf-7L3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C4a-zf-7L3">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -34,7 +34,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1_page_bg1" translatesAutoresizingMaskIntoConstraints="NO" id="k04-ER-6bc">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_first_page" translatesAutoresizingMaskIntoConstraints="NO" id="k04-ER-6bc">
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <viewLayoutGuide key="safeArea" id="pqA-dG-OzO"/>
                             </imageView>
@@ -210,7 +210,7 @@
                             <constraint firstItem="QlS-yr-Bzj" firstAttribute="centerX" secondItem="k04-ER-6bc" secondAttribute="centerX" id="EpM-6w-Bvx"/>
                             <constraint firstItem="k04-ER-6bc" firstAttribute="top" secondItem="awf-Rm-Vd1" secondAttribute="top" id="Pb9-Gc-q2Q"/>
                             <constraint firstItem="awf-Rm-Vd1" firstAttribute="centerX" secondItem="RpP-kf-D1e" secondAttribute="centerX" id="RGw-Ku-nYx"/>
-                            <constraint firstItem="RpP-kf-D1e" firstAttribute="bottom" secondItem="awf-Rm-Vd1" secondAttribute="bottom" constant="-40" id="RVC-Ae-tMC"/>
+                            <constraint firstItem="RpP-kf-D1e" firstAttribute="bottom" secondItem="k04-ER-6bc" secondAttribute="bottom" constant="-40" id="RVC-Ae-tMC"/>
                             <constraint firstItem="QlS-yr-Bzj" firstAttribute="centerY" secondItem="k04-ER-6bc" secondAttribute="centerY" id="Spx-LT-syt"/>
                             <constraint firstAttribute="bottom" secondItem="k04-ER-6bc" secondAttribute="bottom" id="Wte-0y-jJy"/>
                             <constraint firstItem="Xle-EY-mqB" firstAttribute="top" secondItem="awf-Rm-Vd1" secondAttribute="top" constant="22" id="X6Z-e5-tu8"/>
@@ -238,7 +238,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1_page_bg1" width="1080" height="1920"/>
+        <image name="bg_first_page" width="1080" height="1920"/>
         <image name="ic_flag_england" width="45" height="45"/>
         <image name="ic_info" width="46" height="46"/>
         <image name="ic_minus" width="131" height="132"/>
