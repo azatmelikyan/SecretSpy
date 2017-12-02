@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -101,7 +100,7 @@
                                                     <action selector="spyMinusClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WhD-Tf-v0X"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zoom_top" translatesAutoresizingMaskIntoConstraints="NO" id="pJ6-Jo-NOj">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_spy_count_selection" translatesAutoresizingMaskIntoConstraints="NO" id="pJ6-Jo-NOj">
                                                 <rect key="frame" x="84.5" y="0.0" width="150" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="3Qh-Mu-uEU"/>
@@ -109,13 +108,13 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2R-EE-eIx">
-                                                <rect key="frame" x="131.5" y="8" width="30" height="30"/>
+                                                <rect key="frame" x="144.5" y="113" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="H6U-SH-CxL"/>
                                                     <constraint firstAttribute="width" constant="30" id="LSu-Zz-eG2"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" red="0.82352941176470584" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxZ-tt-cnO">
@@ -137,10 +136,10 @@
                                             <constraint firstItem="jbU-Er-PhP" firstAttribute="centerY" secondItem="zHj-FD-VYI" secondAttribute="centerY" constant="30" id="azm-fV-lDI"/>
                                             <constraint firstItem="jbU-Er-PhP" firstAttribute="trailing" secondItem="pJ6-Jo-NOj" secondAttribute="leading" id="cYe-q3-uCY"/>
                                             <constraint firstAttribute="height" constant="150" id="gp3-FA-76g"/>
-                                            <constraint firstItem="j2R-EE-eIx" firstAttribute="trailing" secondItem="pJ6-Jo-NOj" secondAttribute="centerX" constant="2" id="ile-uJ-clr"/>
+                                            <constraint firstItem="j2R-EE-eIx" firstAttribute="centerX" secondItem="pJ6-Jo-NOj" secondAttribute="centerX" id="ile-uJ-clr"/>
                                             <constraint firstItem="IxZ-tt-cnO" firstAttribute="centerY" secondItem="zHj-FD-VYI" secondAttribute="centerY" constant="30" id="kxs-2v-U8z"/>
                                             <constraint firstItem="IxZ-tt-cnO" firstAttribute="leading" secondItem="pJ6-Jo-NOj" secondAttribute="trailing" id="oco-Re-edl"/>
-                                            <constraint firstItem="j2R-EE-eIx" firstAttribute="top" secondItem="pJ6-Jo-NOj" secondAttribute="top" constant="8" id="pLH-ha-gkf"/>
+                                            <constraint firstItem="j2R-EE-eIx" firstAttribute="bottom" secondItem="pJ6-Jo-NOj" secondAttribute="bottom" constant="-7" id="pLH-ha-gkf"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSm-TS-lu0">
@@ -157,7 +156,7 @@
                                                     <action selector="playersMinusClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d1V-Gb-7wC"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zoom_bottom" translatesAutoresizingMaskIntoConstraints="NO" id="nxA-L7-Q85">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_count_selection" translatesAutoresizingMaskIntoConstraints="NO" id="nxA-L7-Q85">
                                                 <rect key="frame" x="84.5" y="0.0" width="150" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="0xn-Ya-c5e"/>
@@ -176,13 +175,13 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLX-jl-bv3">
-                                                <rect key="frame" x="131.5" y="112" width="30" height="30"/>
+                                                <rect key="frame" x="144.5" y="7" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="IK2-dv-1Lk"/>
                                                     <constraint firstAttribute="width" constant="30" id="uOZ-KM-tfb"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" red="0.82352941176470584" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -190,13 +189,13 @@
                                         <constraints>
                                             <constraint firstItem="8Nn-vC-afX" firstAttribute="centerY" secondItem="sSm-TS-lu0" secondAttribute="centerY" constant="-30" id="19C-iN-ldB"/>
                                             <constraint firstAttribute="height" constant="150" id="3ca-CA-jQN"/>
-                                            <constraint firstItem="zLX-jl-bv3" firstAttribute="bottom" secondItem="nxA-L7-Q85" secondAttribute="bottom" constant="-8" id="59U-Bc-k6Y"/>
+                                            <constraint firstItem="zLX-jl-bv3" firstAttribute="top" secondItem="nxA-L7-Q85" secondAttribute="top" constant="7" id="59U-Bc-k6Y"/>
                                             <constraint firstItem="nxA-L7-Q85" firstAttribute="centerX" secondItem="sSm-TS-lu0" secondAttribute="centerX" id="Cqi-cZ-4ma"/>
                                             <constraint firstItem="1q7-cm-gab" firstAttribute="centerY" secondItem="sSm-TS-lu0" secondAttribute="centerY" constant="-30" id="QsO-Dx-SuT"/>
                                             <constraint firstItem="nxA-L7-Q85" firstAttribute="centerY" secondItem="sSm-TS-lu0" secondAttribute="centerY" id="UJB-Gr-Km3"/>
                                             <constraint firstItem="8Nn-vC-afX" firstAttribute="leading" secondItem="nxA-L7-Q85" secondAttribute="trailing" id="e47-oV-IYw"/>
                                             <constraint firstItem="1q7-cm-gab" firstAttribute="trailing" secondItem="nxA-L7-Q85" secondAttribute="leading" id="eFA-uS-QPs"/>
-                                            <constraint firstItem="zLX-jl-bv3" firstAttribute="trailing" secondItem="nxA-L7-Q85" secondAttribute="centerX" constant="2" id="omS-1i-mZE"/>
+                                            <constraint firstItem="zLX-jl-bv3" firstAttribute="centerX" secondItem="nxA-L7-Q85" secondAttribute="centerX" id="omS-1i-mZE"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -243,7 +242,7 @@
         <image name="ic_info" width="46" height="46"/>
         <image name="ic_minus" width="131" height="132"/>
         <image name="ic_plus" width="131" height="133"/>
-        <image name="zoom_bottom" width="472" height="649"/>
-        <image name="zoom_top" width="472" height="650"/>
+        <image name="icon_count_selection" width="351" height="538"/>
+        <image name="icon_spy_count_selection" width="351" height="538"/>
     </resources>
 </document>
