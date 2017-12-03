@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *timerLabelHeightConstraint;
 @property (weak, nonatomic) IBOutlet UIButton *startAndResultButton;
 @property (weak, nonatomic) IBOutlet UIView *bannerView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bannerViewHeightConstraint;
 
 @property (nonatomic) GADBannerView *adBannerView;
 @property (nonatomic) GADInterstitial *adFullBannerView;
@@ -73,7 +74,6 @@
     GADInterstitial *interstitial =
     [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-8490603098673718/4778492739"];
     interstitial.delegate = self;
-    [interstitial loadRequest:[GADRequest request]];
     return interstitial;
 }
 
@@ -139,7 +139,11 @@
                                style:UIAlertActionStyleDefault
                                handler:^(UIAlertAction *action)
                                {
-                                   [self presentFullScreenAd];
+                                   if (self.adFullBannerView.isReady) {
+                                       [self presentFullScreenAd];
+                                   } else {
+                                       [self goBack];
+                                   }
 
                                }];
     [self showPopUpWithActions:@[cancelAction, okAction] title:[[SSLanguageManager sharedInstance] localizedString:@"close_the_game"] message:[[SSLanguageManager sharedInstance] localizedString:@"msg_for_clse_game"]];
@@ -186,13 +190,24 @@
     [self showPopUpWithActions:@[cancelAction, okAction] title:[[SSLanguageManager sharedInstance] localizedString:@"show_spy_index"] message:[[SSLanguageManager sharedInstance] localizedString:@"discover_a_spy_msg"]];
 }
 
+- (void)goBack {
+    [self.navigationController.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj isKindOfClass:[ViewController class]]) {
+            [self.navigationController popToViewController:obj animated:YES];
+        }
+    }];
+}
 
 #pragma mark - GADBannerViewDelegate
 
 
 - (void)adViewDidReceiveAd:(GADBannerView *)bannerView {
-    bannerView.frame = CGRectMake(0, 0, self.bannerView.frame.size.width, self.bannerView.frame.size.height);
+    self.bannerViewHeightConstraint.constant = 44;
+    bannerView.frame = CGRectMake(0, 0, self.bannerView.frame.size.width, 44);
     [self.bannerView addSubview:bannerView];
+    [UIView animateWithDuration:0.3 animations:^{
+        [self.view layoutIfNeeded];
+    }];
 }
 
 - (void)adView:(GADBannerView *)bannerView didFailToReceiveAdWithError:(GADRequestError *)error {
@@ -202,12 +217,7 @@
 #pragma mark - GADBannerViewDelegate
 
 - (void)interstitialDidDismissScreen:(GADInterstitial *)ad {
-    [self.navigationController.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([obj isKindOfClass:[ViewController class]]) {
-            [self.navigationController popToViewController:obj animated:YES];
-        }
-    }];
-    self.adFullBannerView = [self createAndLoadInterstitial];
+    [self goBack];
 }
 
 @end

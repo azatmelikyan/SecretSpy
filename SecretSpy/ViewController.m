@@ -21,7 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *currentLanguageImageView;
 
 @property (nonatomic) VLDContextSheet *contextSheet;
-@property (nonatomic) NSUInteger playersCount;
+@property (nonatomic) NSUInteger detectivesCount;
 @property (nonatomic) NSUInteger spyCount;
 @property (nonatomic) NSUInteger timeInterval;
 
@@ -36,10 +36,10 @@
     [self.startGameButton setTitle:[[SSLanguageManager sharedInstance] localizedString:@"start_game"] forState:UIControlStateNormal];
     self.startGameButton.layer.borderWidth = 3;
     self.startGameButton.layer.borderColor = [UIColor grayColor].CGColor;
-    self.playersCount = 4;
+    self.detectivesCount = 4;
     self.spyCount = 1;
     self.timeInterval = 7;
-    self.playersCountLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.playersCount];
+    self.playersCountLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.detectivesCount];
     self.spyCountLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.spyCount];
     [self setupLanguge];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleLanguageChange:) name:kSCNotificationLanguageChanged object:nil];
@@ -52,19 +52,19 @@
 }
 
 - (IBAction)startGameClick:(id)sender {
-    SSGameSession *gameSession = [[SSGameSession alloc] initWithPlayersCount:self.playersCount spyCount:self.spyCount timeInMinutes:self.timeInterval];
+    SSGameSession *gameSession = [[SSGameSession alloc] initWithPlayersCount:[self playersCount] spyCount:self.spyCount timeInMinutes:self.timeInterval];
     SSGameContainerViewController *vc = [[SSGameContainerViewController alloc] initWithGameSession:gameSession];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)playersMinusClick:(id)sender {
-    self.playersCount--;
-    self.playersCountLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.playersCount];
+    self.detectivesCount--;
+    self.playersCountLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.detectivesCount];
 }
 
 - (IBAction)playersPlusClick:(id)sender {
-    self.playersCount++;
-    self.playersCountLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.playersCount];
+    self.detectivesCount++;
+    self.playersCountLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.detectivesCount];
 }
 
 - (IBAction)spyMinusClick:(id)sender {
@@ -79,14 +79,14 @@
 
 
 
-- (void)setPlayersCount:(NSUInteger)playersCount {
-    if (playersCount >= 3 && playersCount < 20) {
-        _playersCount = playersCount;
+- (void)setDetectivesCount:(NSUInteger)detectivesCount {
+    if (detectivesCount >= 3 && [self playersCount] < 20) {
+        _detectivesCount = detectivesCount;
     }
 }
 
 - (void)setSpyCount:(NSUInteger)spyCount {
-    if (spyCount > 0 && spyCount <= self.playersCount) {
+    if (spyCount > 0 && [self playersCount] < 20) {
         _spyCount = spyCount;
     }
 }
@@ -101,6 +101,10 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+
+- (NSUInteger)playersCount {
+    return self.detectivesCount + self.spyCount;
+}
 
 - (void)createContextSheet {
     VLDContextSheetItem *item1 = [[VLDContextSheetItem alloc] initWithTitle: @"English"

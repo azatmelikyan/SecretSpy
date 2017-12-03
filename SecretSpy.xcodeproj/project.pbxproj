@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10610499FC0ABE6D6D81EF8C /* libPods-SecretSpyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8A889EC8903175D463FB55F /* libPods-SecretSpyTests.a */; };
+		39DC923A6A0F68A86219CFE5 /* libPods-SecretSpy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 647BB5A0FBE164ED71345B19 /* libPods-SecretSpy.a */; };
 		A599B3581FC750DC002DAFCB /* SCWrapperScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A599B3561FC750DB002DAFCB /* SCWrapperScrollView.m */; };
 		A599B3591FC750DC002DAFCB /* SCParalaxBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = A599B3571FC750DB002DAFCB /* SCParalaxBehavior.m */; };
 		A599B35C1FC75567002DAFCB /* SSRulesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A599B35A1FC75567002DAFCB /* SSRulesViewController.m */; };
@@ -17,7 +19,6 @@
 		A5D33CE91FBA38BA0039BB79 /* VLDContextSheetItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D33CE41FBA38BA0039BB79 /* VLDContextSheetItem.m */; };
 		A5D33CEA1FBA38BA0039BB79 /* VLDContextSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D33CE61FBA38BA0039BB79 /* VLDContextSheet.m */; };
 		AC4366A51FB4DD3700A5A9E1 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = AC4366A41FB4DD3700A5A9E1 /* words.json */; };
-		BAEE76CBAF08E2DAFEF7A2F1 /* libPods-SecretSpyUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0A5CBFF69A80BAE0A0C347 /* libPods-SecretSpyUITests.a */; };
 		CE43869D1FBA225D004E53ED /* SSTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = CE43869C1FBA225D004E53ED /* SSTimer.m */; };
 		CEFE6C541FB0EE1700EA3CC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFE6C531FB0EE1700EA3CC3 /* AppDelegate.m */; };
 		CEFE6C571FB0EE1700EA3CC3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFE6C561FB0EE1700EA3CC3 /* ViewController.m */; };
@@ -32,7 +33,7 @@
 		CEFE6C8E1FB36C7100EA3CC3 /* SSGameContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFE6C8C1FB36C7100EA3CC3 /* SSGameContainerViewController.m */; };
 		CEFE6C8F1FB36C7100EA3CC3 /* SSGameContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEFE6C8D1FB36C7100EA3CC3 /* SSGameContainerViewController.xib */; };
 		CEFE6C961FB38C5F00EA3CC3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEFE6C981FB38C5F00EA3CC3 /* Localizable.strings */; };
-		DC2D0CFBE83FA61F2E999815 /* libPods-SecretSpyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C103486D4F45D8F72771AAB /* libPods-SecretSpyTests.a */; };
+		E0707333990C4271D6064C05 /* libPods-SecretSpyUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC0126E6E0F93F34C987ACC /* libPods-SecretSpyUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +57,8 @@
 		06F8208518D6FE7EF126F650 /* Pods-SecretSpy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSpy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SecretSpy/Pods-SecretSpy.debug.xcconfig"; sourceTree = "<group>"; };
 		30E2350FA174D3AC43D34C11 /* Pods-SecretSpyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSpyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SecretSpyUITests/Pods-SecretSpyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4BF9E61281DEA92DDC8E0363 /* Pods-SecretSpyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSpyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SecretSpyTests/Pods-SecretSpyTests.release.xcconfig"; sourceTree = "<group>"; };
-		8C103486D4F45D8F72771AAB /* libPods-SecretSpyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SecretSpyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		647BB5A0FBE164ED71345B19 /* libPods-SecretSpy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SecretSpy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FC0126E6E0F93F34C987ACC /* libPods-SecretSpyUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SecretSpyUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D27A7C38BFBF2EF2CC4BAB0 /* Pods-SecretSpy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSpy.release.xcconfig"; path = "Pods/Target Support Files/Pods-SecretSpy/Pods-SecretSpy.release.xcconfig"; sourceTree = "<group>"; };
 		A599B3541FC750DB002DAFCB /* SCParalaxBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCParalaxBehavior.h; sourceTree = "<group>"; };
 		A599B3551FC750DB002DAFCB /* SCWrapperScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWrapperScrollView.h; sourceTree = "<group>"; };
@@ -77,7 +79,6 @@
 		A5D33CE71FBA38BA0039BB79 /* VLDContextSheetItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VLDContextSheetItemView.h; path = SecretSpy/Classes/VLDContextSheetItemView.h; sourceTree = SOURCE_ROOT; };
 		A94190F7C8DAEBC7DD785857 /* Pods-SecretSpyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSpyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SecretSpyTests/Pods-SecretSpyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC4366A41FB4DD3700A5A9E1 /* words.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
-		BE0A5CBFF69A80BAE0A0C347 /* libPods-SecretSpyUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SecretSpyUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7E9A0CB6CDFDB8AF4A328B6 /* Pods-SecretSpyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSpyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SecretSpyUITests/Pods-SecretSpyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CE43869B1FBA225D004E53ED /* SSTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSTimer.h; sourceTree = "<group>"; };
 		CE43869C1FBA225D004E53ED /* SSTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSTimer.m; sourceTree = "<group>"; };
@@ -111,6 +112,7 @@
 		CEFE6C971FB38C5F00EA3CC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CEFE6C991FB38C6200EA3CC3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CEFE6C9A1FB38C6300EA3CC3 /* hy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hy; path = hy.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E8A889EC8903175D463FB55F /* libPods-SecretSpyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SecretSpyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39DC923A6A0F68A86219CFE5 /* libPods-SecretSpy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC2D0CFBE83FA61F2E999815 /* libPods-SecretSpyTests.a in Frameworks */,
+				10610499FC0ABE6D6D81EF8C /* libPods-SecretSpyTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,7 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAEE76CBAF08E2DAFEF7A2F1 /* libPods-SecretSpyUITests.a in Frameworks */,
+				E0707333990C4271D6064C05 /* libPods-SecretSpyUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,8 +172,9 @@
 		C766E3ED86A8724AE843D6B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8C103486D4F45D8F72771AAB /* libPods-SecretSpyTests.a */,
-				BE0A5CBFF69A80BAE0A0C347 /* libPods-SecretSpyUITests.a */,
+				647BB5A0FBE164ED71345B19 /* libPods-SecretSpy.a */,
+				E8A889EC8903175D463FB55F /* libPods-SecretSpyTests.a */,
+				8FC0126E6E0F93F34C987ACC /* libPods-SecretSpyUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -481,7 +485,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B4DD1A4580DC3E78BE33217C /* [CP] Embed Pods Frameworks */ = {
@@ -514,7 +518,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D0E29EB11164137DD70DC7B3 /* [CP] Check Pods Manifest.lock */ = {
@@ -532,7 +536,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E40CB084B1C02B9B799DFE01 /* [CP] Copy Pods Resources */ = {
