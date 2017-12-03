@@ -49,5 +49,20 @@
 "pharmacy" = "Аптека";
 "roof" = "Крыша";
 "basement" = "Подвал";
-"rules_title" = "Rules";
+"rules_title" = "Правила";
 
+"rules_text" = "In a game of SecretSpy the players find themselves in a certain location while each player gets an additional role assigned to them. At least one player is a spy who does not know the location.\nAfter everybody got his identity through the start the timer and last game's spy starts by asking an arbitrary question to another player who answers that question in any way he likes. Now that player asks the next question and so forth. The player who just asked a question can no be questioned directly afterwards.\nThe goal of the spy is to find out the location or survive undetected until the timer is over.\nThe goal for the rest of the players is to find out who does not know the location and therefore is a spy.\nIt is therefore important to be smart about the questions asked because you will want to find out if the other player is the spy while not revealing to much information to the actual spy. The spy has to use the available information to vaguely answer the questions and not get noticed.\nAt any during the game a player can accuse another player of being the spy. The timer gets paused and a vote is cast. If everybody except the suspect agrees the player's identity is revealed. If he is the spy the players win, otherwise the actual spy wins. If no consensus is reached, the game and the timer continue.\nIf during the game the spy is sure at which location the game takes place he can reveal his identity and guess. he is right he wins, if he is wrong he looses. While the timer is paused a spy can not guess the location.\nIf more than 2 spies are in the game, once a spy reveals his identity every other spy does the same and every spy can guess a separate location. If at least one is right, the spies win.\nWhen the timer finishes everybody has a last chance to accuse another player of being the spy. If everybody agrees on a suspect, his identity is revealed, and like before it is determined who wins. If no consent about a suspect can be achieved and everybody was able to name a suspect, the spy wins.";
+"number_of_spy" = "Шпион: ";
+"start_timer" = "Запуск таймера";
+"result" = "Результат";
+"time_is_out" = "Время вышло";
+"cancel" = "Отмена";
+"yes" = "Да";
+"close_the_game" = "Закрыть игру";
+"msg_for_clse_game" = "Вы уверены, что хотите закрыть игру?";
+"show_spy_index" = "Показать номер шпиона";
+"discover_a_spy_msg" = "Вы уверены, что обнаружили шпиона?";
+"show" = "Показать"; 
+"hide" = "Скрыть";
+"player_number" = "Игрок %@";
+"new_game" = "Новая игра"

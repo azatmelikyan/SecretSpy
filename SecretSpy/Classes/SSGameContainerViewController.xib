@@ -50,7 +50,7 @@
                         <constraint firstAttribute="height" constant="44" id="4i6-7H-QZg"/>
                         <constraint firstAttribute="width" constant="44" id="vTc-Jk-xJX"/>
                     </constraints>
-                    <state key="normal" image="icon_back"/>
+                    <state key="normal" image="ic_back_white"/>
                     <connections>
                         <action selector="backButtonClicked:" destination="-1" eventType="touchUpInside" id="Rxu-R1-xqC"/>
                     </connections>
@@ -117,7 +117,7 @@
         </view>
     </objects>
     <resources>
-        <image name="icon_back" width="47" height="47"/>
+        <image name="ic_back_white" width="44" height="44"/>
         <image name="word_page_bg" width="1080" height="1920"/>
     </resources>
 </document>

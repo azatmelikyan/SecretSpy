@@ -96,7 +96,7 @@
             indexes = [indexes stringByAppendingString:[NSString stringWithFormat:@"%lu ", (unsigned long)idx + 1]];
         }
     }];
-    return [@"Spy: " stringByAppendingString:indexes];
+    return [[[SSLanguageManager sharedInstance] localizedString:@"number_of_spy"] stringByAppendingString:indexes];
 }
     
 - (NSArray *)wordsArray {

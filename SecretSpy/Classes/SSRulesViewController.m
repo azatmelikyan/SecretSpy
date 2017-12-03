@@ -116,7 +116,7 @@
     
     self.backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
     [self.backButton addTarget:self action:@selector(backAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self.backButton setImage:[UIImage imageNamed:@"ic_menu_back"] forState:UIControlStateNormal];
+    [self.backButton setImage:[UIImage imageNamed:@"ic_back_white"] forState:UIControlStateNormal];
     
     UINavigationItem *navigationItem = [[UINavigationItem alloc] initWithTitle:[[SSLanguageManager sharedInstance] localizedString:@"rules_title"]];
 

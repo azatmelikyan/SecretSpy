@@ -8,6 +8,7 @@
 
 #import "SSGameContainerViewController.h"
 #import "SSTimerViewController.h"
+#import "SSLanguageManager.h"
 
 @interface SSGameContainerViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *playerLabel;
@@ -37,11 +38,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.playerLabel.text = @"Player 1";
+    self.playerLabel.text = [NSString stringWithFormat:[[SSLanguageManager sharedInstance] localizedString:@"player_number"],@1];
 //    self.wordLabel.hidden = YES;
     self.wordLabel.text = [self.gameSession nextWord];
 
-    [self.showAndHideButton setTitle:@"Show" forState:UIControlStateNormal];
+    [self.showAndHideButton setTitle:[[SSLanguageManager sharedInstance] localizedString:@"show"] forState:UIControlStateNormal];
     self.wordBackgroundViewHeightConstraint.constant = 0;
     // Do any additional setup after loading the view from its nib.
 }
@@ -53,18 +54,7 @@
 
 
 - (IBAction)showAndHideClick:(UIButton *)sender {
-    if ([sender.titleLabel.text isEqualToString:@"Show the result"]) {
-        NSArray *result = [self.gameSession finishGame];
-        NSString *reslutString = @"";
-        for (int i = 0; i < result.count; i++) {
-            NSNumber *index = result[i];
-            int i = [index intValue] + 1;
-            reslutString = [reslutString stringByAppendingString:[NSString stringWithFormat:@"  %i", i]];
-        }
-        self.wordLabel.text = [NSString stringWithFormat:@"Spy index: %@", reslutString];
-        sender.hidden = YES;
-        return;
-    }
+
     if (self.wordBackgroundViewHeightConstraint.constant != 0) {
         if (self.gameSession.currentPlayerIndex == self.gameSession.players.count) {
 //            self.playerLabel.text = @"Ready to Start";
@@ -74,20 +64,14 @@
             [self.navigationController pushViewController:timerController animated:YES];
             return;
         }
-        [sender setTitle:@"Show" forState:UIControlStateNormal];
-        self.playerLabel.text = [NSString stringWithFormat:@"Player %lu",(unsigned long)self.gameSession.currentPlayerIndex + 1];
+        [sender setTitle:[[SSLanguageManager sharedInstance] localizedString:@"show"] forState:UIControlStateNormal];
+        self.playerLabel.text = [NSString stringWithFormat:[[SSLanguageManager sharedInstance] localizedString:@"player_number"],@((unsigned long)self.gameSession.currentPlayerIndex + 1)];
         self.wordLabel.text = [self.gameSession nextWord];
 //        self.wordLabel.hidden = !self.wordLabel.hidden;
         [self hide];
     } else {
-        if ([sender.titleLabel.text isEqualToString:@"Start Timer"]) {
-           
-            
-            [sender setTitle:@"Show the result" forState:UIControlStateNormal];
-            return;
-        }
         
-        [sender setTitle:@"Hide" forState:UIControlStateNormal];
+        [sender setTitle:[[SSLanguageManager sharedInstance] localizedString:@"hide"] forState:UIControlStateNormal];
 //        self.wordLabel.hidden = !self.wordLabel.hidden;
         [self show];
     }

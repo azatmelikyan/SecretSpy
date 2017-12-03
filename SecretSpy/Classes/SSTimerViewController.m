@@ -8,6 +8,8 @@
 
 #import "SSTimerViewController.h"
 #import "ViewController.h"
+#import "SSLanguageManager.h"
+
 @import GoogleMobileAds;
 
 @interface SSTimerViewController () <GADBannerViewDelegate, GADInterstitialDelegate>
@@ -38,6 +40,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.startAndResultButton setTitle:[[SSLanguageManager sharedInstance] localizedString:@"start_timer"] forState:UIControlStateNormal];
     self.timerLabelHeightConstraint.constant = 0;
     [self setupAds];
     
@@ -99,12 +102,12 @@
                                                 userInfo:nil
                                                  repeats:YES];
     [self countDown];
-    [self.startAndResultButton setTitle:@"Result" forState:UIControlStateNormal];
+    [self.startAndResultButton setTitle:[[SSLanguageManager sharedInstance] localizedString:@"result"] forState:UIControlStateNormal];
 }
 
 - (void)countDown {
     if (self.remainingCounts-- == -1) {
-        self.timerLabel.text = @"Time is out";
+        self.timerLabel.text = [[SSLanguageManager sharedInstance] localizedString:@"time_is_out"];
         [self.timer invalidate];
         return;
     }
@@ -118,7 +121,7 @@
         [self.timer invalidate];
     }
     UIAlertAction *cancelAction = [UIAlertAction
-                                   actionWithTitle:@"Cancel"
+                                   actionWithTitle:[[SSLanguageManager sharedInstance] localizedString:@"cancel"]
                                    style:UIAlertActionStyleCancel
                                    handler:^(UIAlertAction *action)
                                    {
@@ -132,14 +135,14 @@
                                    }];
     
     UIAlertAction *okAction = [UIAlertAction
-                               actionWithTitle:@"OK"
+                               actionWithTitle:[[SSLanguageManager sharedInstance] localizedString:@"yes"]
                                style:UIAlertActionStyleDefault
                                handler:^(UIAlertAction *action)
                                {
                                    [self presentFullScreenAd];
 
                                }];
-    [self showPopUpWithActions:@[cancelAction, okAction] title:@"Close the game" message:@"Are you sure you want close the game?"];
+    [self showPopUpWithActions:@[cancelAction, okAction] title:[[SSLanguageManager sharedInstance] localizedString:@"close_the_game"] message:[[SSLanguageManager sharedInstance] localizedString:@"msg_for_clse_game"]];
 }
 
 - (void)showPopUpWithActions:(NSArray <UIAlertAction *> *)actions title:(NSString *)title message:(NSString *)message{
@@ -159,7 +162,7 @@
         [self.timer invalidate];
     }
     UIAlertAction *cancelAction = [UIAlertAction
-                                   actionWithTitle:@"Cancel"
+                                   actionWithTitle:[[SSLanguageManager sharedInstance] localizedString:@"cancel"]
                                    style:UIAlertActionStyleCancel
                                    handler:^(UIAlertAction *action)
                                    {
@@ -173,14 +176,14 @@
                                    }];
     
     UIAlertAction *okAction = [UIAlertAction
-                               actionWithTitle:@"OK"
+                               actionWithTitle:[[SSLanguageManager sharedInstance] localizedString:@"yes"]
                                style:UIAlertActionStyleDefault
                                handler:^(UIAlertAction *action)
                                {
                                    self.timerLabel.text = self.resultString;
                                    self.startAndResultButton.hidden = YES;
                                }];
-    [self showPopUpWithActions:@[cancelAction, okAction] title:@"Show Spy index" message:@"Are You sure you discovered the spy?"];
+    [self showPopUpWithActions:@[cancelAction, okAction] title:[[SSLanguageManager sharedInstance] localizedString:@"show_spy_index"] message:[[SSLanguageManager sharedInstance] localizedString:@"discover_a_spy_msg"]];
 }
 
 
