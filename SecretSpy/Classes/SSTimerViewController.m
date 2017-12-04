@@ -9,6 +9,7 @@
 #import "SSTimerViewController.h"
 #import "ViewController.h"
 #import "SSLanguageManager.h"
+#import <AVFoundation/AVFoundation.h>
 
 @import GoogleMobileAds;
 
@@ -23,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIView *bannerView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bannerViewHeightConstraint;
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
+@property (nonatomic) AVAudioPlayer *audioPlayer;
 
 @property (nonatomic) GADBannerView *adBannerView;
 @property (nonatomic) GADInterstitial *adFullBannerView;
@@ -114,9 +116,19 @@
 }
 
 - (void)countDown {
-    if (self.remainingCounts-- == -1) {
+    if (self.remainingCounts-- == 0) {
         self.timerLabel.text = [[SSLanguageManager sharedInstance] localizedString:@"time_is_out"];
         [self.timer invalidate];
+        NSURL *url = [[NSBundle mainBundle] URLForResource:@"Cuckoo-bird-sound" withExtension: @"mp3"];
+        
+        if (!url){NSLog(@"file not found"); return;
+            
+        }
+        
+        self.audioPlayer = [[AVAudioPlayer alloc]
+                            initWithContentsOfURL:url
+                            error:nil];
+        [self.audioPlayer play];
         return;
     }
     int minutes = (int)self.remainingCounts / 60;

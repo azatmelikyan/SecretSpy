@@ -17,6 +17,8 @@
 		A5D33CE81FBA38BA0039BB79 /* VLDContextSheetItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D33CE31FBA38BA0039BB79 /* VLDContextSheetItemView.m */; };
 		A5D33CE91FBA38BA0039BB79 /* VLDContextSheetItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D33CE41FBA38BA0039BB79 /* VLDContextSheetItem.m */; };
 		A5D33CEA1FBA38BA0039BB79 /* VLDContextSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D33CE61FBA38BA0039BB79 /* VLDContextSheet.m */; };
+		A5F0AC031FD5C06200630806 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F0AC021FD5C06200630806 /* UIImage+ImageEffects.m */; };
+		A5F0AC071FD5D73400630806 /* Cuckoo-bird-sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5F0AC061FD5D73400630806 /* Cuckoo-bird-sound.mp3 */; };
 		AC4366A51FB4DD3700A5A9E1 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = AC4366A41FB4DD3700A5A9E1 /* words.json */; };
 		CE43869D1FBA225D004E53ED /* SSTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = CE43869C1FBA225D004E53ED /* SSTimer.m */; };
 		CEFE6C541FB0EE1700EA3CC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFE6C531FB0EE1700EA3CC3 /* AppDelegate.m */; };
@@ -75,6 +77,9 @@
 		A5D33CE51FBA38BA0039BB79 /* VLDContextSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VLDContextSheet.h; path = SecretSpy/Classes/VLDContextSheet.h; sourceTree = SOURCE_ROOT; };
 		A5D33CE61FBA38BA0039BB79 /* VLDContextSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VLDContextSheet.m; path = SecretSpy/Classes/VLDContextSheet.m; sourceTree = SOURCE_ROOT; };
 		A5D33CE71FBA38BA0039BB79 /* VLDContextSheetItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VLDContextSheetItemView.h; path = SecretSpy/Classes/VLDContextSheetItemView.h; sourceTree = SOURCE_ROOT; };
+		A5F0AC011FD5C06100630806 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		A5F0AC021FD5C06200630806 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		A5F0AC061FD5D73400630806 /* Cuckoo-bird-sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Cuckoo-bird-sound.mp3"; sourceTree = "<group>"; };
 		A94190F7C8DAEBC7DD785857 /* Pods-SecretSpyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSpyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SecretSpyTests/Pods-SecretSpyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC4366A41FB4DD3700A5A9E1 /* words.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
 		C7E9A0CB6CDFDB8AF4A328B6 /* Pods-SecretSpyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSpyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SecretSpyUITests/Pods-SecretSpyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -180,6 +185,7 @@
 			children = (
 				AC4366A41FB4DD3700A5A9E1 /* words.json */,
 				CEFE6C981FB38C5F00EA3CC3 /* Localizable.strings */,
+				A5F0AC061FD5D73400630806 /* Cuckoo-bird-sound.mp3 */,
 				CEFE6C511FB0EE1700EA3CC3 /* SecretSpy */,
 				CEFE6C6A1FB0EE1700EA3CC3 /* SecretSpyTests */,
 				CEFE6C751FB0EE1700EA3CC3 /* SecretSpyUITests */,
@@ -241,6 +247,8 @@
 				A599B35A1FC75567002DAFCB /* SSRulesViewController.m */,
 				A599B3541FC750DB002DAFCB /* SCParalaxBehavior.h */,
 				A599B3571FC750DB002DAFCB /* SCParalaxBehavior.m */,
+				A5F0AC011FD5C06100630806 /* UIImage+ImageEffects.h */,
+				A5F0AC021FD5C06200630806 /* UIImage+ImageEffects.m */,
 				A599B3551FC750DB002DAFCB /* SCWrapperScrollView.h */,
 				A599B3561FC750DB002DAFCB /* SCWrapperScrollView.m */,
 				A5C2C9891FC1CF18008FBBEA /* SSLanguageManager.h */,
@@ -379,6 +387,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5F0AC071FD5D73400630806 /* Cuckoo-bird-sound.mp3 in Resources */,
 				A5C2C9871FBE1952008FBBEA /* SSTimerViewController.xib in Resources */,
 				CEFE6C961FB38C5F00EA3CC3 /* Localizable.strings in Resources */,
 				CEFE6C8F1FB36C7100EA3CC3 /* SSGameContainerViewController.xib in Resources */,
@@ -557,6 +566,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5F0AC031FD5C06200630806 /* UIImage+ImageEffects.m in Sources */,
 				CE43869D1FBA225D004E53ED /* SSTimer.m in Sources */,
 				CEFE6C571FB0EE1700EA3CC3 /* ViewController.m in Sources */,
 				A599B35C1FC75567002DAFCB /* SSRulesViewController.m in Sources */,

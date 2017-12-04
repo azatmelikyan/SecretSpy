@@ -38,7 +38,7 @@
     self.startGameButton.layer.borderColor = [UIColor grayColor].CGColor;
     self.detectivesCount = 4;
     self.spyCount = 1;
-    self.timeInterval = 7;
+    self.timeInterval = 1;
     self.playersCountLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.detectivesCount];
     self.spyCountLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.spyCount];
     [self setupLanguge];

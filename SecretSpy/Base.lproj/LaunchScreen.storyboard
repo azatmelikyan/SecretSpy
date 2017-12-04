@@ -17,18 +17,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5jz-xP-Yms">
-                                <rect key="frame" x="87.5" y="243.5" width="200" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fon_back" translatesAutoresizingMaskIntoConstraints="NO" id="0iQ-37-KU2">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1024_1024 _transparent" translatesAutoresizingMaskIntoConstraints="NO" id="5jz-xP-Yms">
+                                <rect key="frame" x="37.5" y="193.5" width="300" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="DAb-N0-HR5"/>
-                                    <constraint firstAttribute="height" constant="200" id="vRh-oL-jy5"/>
+                                    <constraint firstAttribute="width" constant="300" id="DAb-N0-HR5"/>
+                                    <constraint firstAttribute="height" constant="300" id="vRh-oL-jy5"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0iQ-37-KU2" secondAttribute="bottom" id="5yK-uR-eXA"/>
+                            <constraint firstItem="0iQ-37-KU2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Fk7-4S-Fbc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="centerY" secondItem="5jz-xP-Yms" secondAttribute="centerY" id="VyA-cT-zOi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="centerX" secondItem="5jz-xP-Yms" secondAttribute="centerX" id="Wqe-mL-5qW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0iQ-37-KU2" secondAttribute="trailing" id="qxc-Cu-5RI"/>
+                            <constraint firstItem="0iQ-37-KU2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ro4-1w-WyP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -38,4 +45,8 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1024_1024 _transparent" width="1025" height="1027"/>
+        <image name="fon_back" width="1080" height="1920"/>
+    </resources>
 </document>
