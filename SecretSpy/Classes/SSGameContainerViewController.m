@@ -16,7 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *showAndHideButton;
 @property (weak, nonatomic) IBOutlet UIView *wordBackgroundView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *wordBackgroundViewHeightConstraint;
-
+    @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constrainOfCurentPlayerLbl;
+    
 
 @property (nonatomic) SSGameSession *gameSession;
 
@@ -37,11 +38,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    UIFont *font = [UIFont systemFontOfSize:20];
+    [self.playerLabel setFont:font];
+    self.playerLabel.adjustsFontSizeToFitWidth = YES;
     self.playerLabel.text = [NSString stringWithFormat:[[SSLanguageManager sharedInstance] localizedString:@"player_number"],@1];
 //    self.wordLabel.hidden = YES;
     self.wordLabel.text = [self.gameSession nextWord];
-
     [self.showAndHideButton setTitle:[[SSLanguageManager sharedInstance] localizedString:@"show"] forState:UIControlStateNormal];
     self.wordBackgroundViewHeightConstraint.constant = 0;
     // Do any additional setup after loading the view from its nib.

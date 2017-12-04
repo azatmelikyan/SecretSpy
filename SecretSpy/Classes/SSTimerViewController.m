@@ -42,6 +42,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.startAndResultButton setTitle:[[SSLanguageManager sharedInstance] localizedString:@"start_timer"] forState:UIControlStateNormal];
+    self.startAndResultButton.titleLabel.adjustsFontSizeToFitWidth = YES;
+    self.timerLabel.adjustsFontSizeToFitWidth = YES;
+    self.timerLabel.numberOfLines = 2;
     self.timerLabelHeightConstraint.constant = 0;
     [self setupAds];
     
