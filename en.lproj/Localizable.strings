@@ -35,7 +35,7 @@
 "submarine" = "Submarine";
 "stadium" = "Stadium";
 "bathroom" = "Bathroom";
-"waterpark" = "WaterPark";
+"waterpark" = "Water Park";
 "dance_club" = "Dance Club";
 "night_club" = "Night Club";
 "space_station" = "Space Station";
@@ -46,7 +46,7 @@
 "tent" = "Tent";
 "airport" = "Airport";
 "parking" = "Parking";
-"dental_cllinic" = "Dental clinic";
+"dental_cllinic" = "Dental Clinic";
 "pharmacy" = "Pharmacy";
 "roof" = "Roof";
 "basement" = "Basement";
