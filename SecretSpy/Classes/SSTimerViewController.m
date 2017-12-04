@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *startAndResultButton;
 @property (weak, nonatomic) IBOutlet UIView *bannerView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bannerViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
 
 @property (nonatomic) GADBannerView *adBannerView;
 @property (nonatomic) GADInterstitial *adFullBannerView;
@@ -91,6 +92,10 @@
 }
 
 - (IBAction)startTimer:(id)sender {
+    if (self.backButton.hidden) {
+        [self goBack];
+        return;
+    }
     if (self.timer) {
         [self showResult];
         return;
@@ -142,11 +147,7 @@
                                style:UIAlertActionStyleDefault
                                handler:^(UIAlertAction *action)
                                {
-                                   if (self.adFullBannerView.isReady) {
-                                       [self presentFullScreenAd];
-                                   } else {
                                        [self goBack];
-                                   }
 
                                }];
     [self showPopUpWithActions:@[cancelAction, okAction] title:[[SSLanguageManager sharedInstance] localizedString:@"close_the_game"] message:[[SSLanguageManager sharedInstance] localizedString:@"msg_for_clse_game"]];
@@ -188,17 +189,22 @@
                                handler:^(UIAlertAction *action)
                                {
                                    self.timerLabel.text = self.resultString;
-                                   self.startAndResultButton.hidden = YES;
+                                   self.backButton.hidden = YES;
+                                   [self.startAndResultButton setTitle:[[SSLanguageManager sharedInstance] localizedString:@"new_game"] forState:UIControlStateNormal];
                                }];
     [self showPopUpWithActions:@[cancelAction, okAction] title:[[SSLanguageManager sharedInstance] localizedString:@"show_spy_index"] message:[[SSLanguageManager sharedInstance] localizedString:@"discover_a_spy_msg"]];
 }
 
 - (void)goBack {
-    [self.navigationController.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([obj isKindOfClass:[ViewController class]]) {
-            [self.navigationController popToViewController:obj animated:YES];
-        }
-    }];
+    if (self.adFullBannerView.isReady) {
+        [self presentFullScreenAd];
+    } else {
+        [self.navigationController.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            if ([obj isKindOfClass:[ViewController class]]) {
+                [self.navigationController popToViewController:obj animated:YES];
+            }
+        }];
+    }
 }
 
 #pragma mark - GADBannerViewDelegate

@@ -60,7 +60,7 @@
 "cancel" = "Cancel";
 "yes" = "YES";
 "close_the_game" = "Close the game";
-"msg_for_clse_game" = "Are you sure you want close the game?";
+"msg_for_clse_game" = "Are you sure you want to close the game?";
 "show_spy_index" = "Show Spy index";
 "discover_a_spy_msg" = "Are you sure you have discovered a spy?";
 "show" = "Show";

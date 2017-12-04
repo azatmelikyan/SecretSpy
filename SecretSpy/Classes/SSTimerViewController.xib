@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SSTimerViewController">
             <connections>
+                <outlet property="backButton" destination="CZQ-hZ-sT7" id="U1y-er-NIG"/>
                 <outlet property="bannerView" destination="5Il-3S-I6r" id="PjE-qY-vkA"/>
                 <outlet property="bannerViewHeightConstraint" destination="bNR-cM-Tfg" id="SjT-da-Rob"/>
                 <outlet property="startAndResultButton" destination="a4L-rC-Qn8" id="fuN-mk-OTq"/>
