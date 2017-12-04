@@ -41,7 +41,8 @@
     UIFont *font = [UIFont systemFontOfSize:20];
     [self.playerLabel setFont:font];
     self.playerLabel.adjustsFontSizeToFitWidth = YES;
-    self.playerLabel.text = [NSString stringWithFormat:[[SSLanguageManager sharedInstance] localizedString:@"player_number"],@1];
+    NSString *countString = [NSString stringWithFormat:@"%lu / %lu", self.gameSession.currentPlayerIndex + 1, (unsigned long)self.gameSession.players.count];
+    self.playerLabel.text = [NSString stringWithFormat:[[SSLanguageManager sharedInstance] localizedString:@"player_number"], countString];
 //    self.wordLabel.hidden = YES;
     self.wordLabel.text = [self.gameSession nextWord];
     [self.showAndHideButton setTitle:[[SSLanguageManager sharedInstance] localizedString:@"show"] forState:UIControlStateNormal];
@@ -67,7 +68,8 @@
             return;
         }
         [sender setTitle:[[SSLanguageManager sharedInstance] localizedString:@"show"] forState:UIControlStateNormal];
-        self.playerLabel.text = [NSString stringWithFormat:[[SSLanguageManager sharedInstance] localizedString:@"player_number"],@((unsigned long)self.gameSession.currentPlayerIndex + 1)];
+        NSString *countString = [NSString stringWithFormat:@"%lu / %lu", self.gameSession.currentPlayerIndex + 1, (unsigned long)self.gameSession.players.count];
+        self.playerLabel.text = [NSString stringWithFormat:[[SSLanguageManager sharedInstance] localizedString:@"player_number"], countString];
         self.wordLabel.text = [self.gameSession nextWord];
 //        self.wordLabel.hidden = !self.wordLabel.hidden;
         [self hide];
