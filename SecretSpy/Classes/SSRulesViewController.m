@@ -240,6 +240,7 @@
     [self.rulesTextView setFont:font];
     self.rulesTextView.text = [[SSLanguageManager sharedInstance] localizedString:@"rules_text"];
     self.rulesTextView.editable = NO;
+    self.rulesTextView.selectable = NO;
 }
 
 - (void)backAction:(id)sender {
