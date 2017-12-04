@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_first_page" translatesAutoresizingMaskIntoConstraints="NO" id="k04-ER-6bc">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <viewLayoutGuide key="safeArea" id="pqA-dG-OzO"/>
                             </imageView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RpP-kf-D1e">
@@ -84,7 +84,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="QlS-yr-Bzj">
-                                <rect key="frame" x="0.0" y="119" width="320" height="350"/>
+                                <rect key="frame" x="0.0" y="109" width="320" height="350"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHj-FD-VYI">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
@@ -207,7 +207,7 @@
                         <color key="backgroundColor" red="0.030256621022221708" green="0.0" blue="0.62504047927461137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QlS-yr-Bzj" firstAttribute="centerX" secondItem="k04-ER-6bc" secondAttribute="centerX" id="EpM-6w-Bvx"/>
-                            <constraint firstItem="k04-ER-6bc" firstAttribute="top" secondItem="awf-Rm-Vd1" secondAttribute="top" id="Pb9-Gc-q2Q"/>
+                            <constraint firstItem="k04-ER-6bc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Pb9-Gc-q2Q"/>
                             <constraint firstItem="awf-Rm-Vd1" firstAttribute="centerX" secondItem="RpP-kf-D1e" secondAttribute="centerX" id="RGw-Ku-nYx"/>
                             <constraint firstItem="RpP-kf-D1e" firstAttribute="bottom" secondItem="k04-ER-6bc" secondAttribute="bottom" constant="-40" id="RVC-Ae-tMC"/>
                             <constraint firstItem="QlS-yr-Bzj" firstAttribute="centerY" secondItem="k04-ER-6bc" secondAttribute="centerY" id="Spx-LT-syt"/>

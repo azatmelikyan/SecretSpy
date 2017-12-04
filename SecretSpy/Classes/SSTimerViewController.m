@@ -11,6 +11,8 @@
 #import "SSLanguageManager.h"
 #import <AVFoundation/AVFoundation.h>
 
+#define IS_IPHONEX (([[UIScreen mainScreen] bounds].size.height-812)?NO:YES)
+
 @import GoogleMobileAds;
 
 @interface SSTimerViewController () <GADBannerViewDelegate, GADInterstitialDelegate>
@@ -223,8 +225,12 @@
 
 
 - (void)adViewDidReceiveAd:(GADBannerView *)bannerView {
-    self.bannerViewHeightConstraint.constant = 44;
-    bannerView.frame = CGRectMake(0, 0, self.bannerView.frame.size.width, 44);
+    if (IS_IPHONEX) {
+        return;
+    }
+    int h = IS_IPHONEX ? 88 : 44;
+    self.bannerViewHeightConstraint.constant = h;
+    bannerView.frame = CGRectMake(0, 0, self.bannerView.frame.size.width, h);
     [self.bannerView addSubview:bannerView];
     [UIView animateWithDuration:0.3 animations:^{
         [self.view layoutIfNeeded];

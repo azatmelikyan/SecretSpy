@@ -26,7 +26,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="word_page_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Pgp-9Z-g18">
-                    <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQm-9z-gWC">
                     <rect key="frame" x="90" y="209" width="140" height="40"/>
@@ -101,9 +101,9 @@
                 <constraint firstItem="v9q-3P-y1s" firstAttribute="width" secondItem="Q5M-cg-NOt" secondAttribute="width" id="3hI-dW-tQg"/>
                 <constraint firstItem="rQS-nZ-SUR" firstAttribute="top" secondItem="v9q-3P-y1s" secondAttribute="bottom" constant="10" id="Aal-n8-akU"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="centerX" secondItem="hQm-9z-gWC" secondAttribute="centerX" id="BAr-qV-NJj"/>
-                <constraint firstItem="Pgp-9Z-g18" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="Bfj-ra-N7B"/>
+                <constraint firstItem="Pgp-9Z-g18" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="Bfj-ra-N7B"/>
                 <constraint firstItem="v9q-3P-y1s" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="K4i-il-O3m"/>
-                <constraint firstItem="Pgp-9Z-g18" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="ORg-LZ-uWZ"/>
+                <constraint firstItem="Pgp-9Z-g18" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ORg-LZ-uWZ"/>
                 <constraint firstItem="v9q-3P-y1s" firstAttribute="centerY" secondItem="Q5M-cg-NOt" secondAttribute="centerY" id="Zpp-M5-Y5d"/>
                 <constraint firstItem="aL7-cm-RIw" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="22" id="gkZ-Ha-yWT"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="centerX" secondItem="rQS-nZ-SUR" secondAttribute="centerX" id="lMq-CC-DQj"/>
@@ -117,7 +117,7 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_back_white" width="44" height="44"/>
+        <image name="ic_back_white" width="46" height="44"/>
         <image name="word_page_bg" width="1080" height="1920"/>
     </resources>
 </document>

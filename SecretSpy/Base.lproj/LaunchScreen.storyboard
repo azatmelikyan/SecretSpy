@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fon_back" translatesAutoresizingMaskIntoConstraints="NO" id="0iQ-37-KU2">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1024_1024 _transparent" translatesAutoresizingMaskIntoConstraints="NO" id="5jz-xP-Yms">
                                 <rect key="frame" x="37.5" y="193.5" width="300" height="300"/>
@@ -30,8 +30,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0iQ-37-KU2" secondAttribute="bottom" id="5yK-uR-eXA"/>
-                            <constraint firstItem="0iQ-37-KU2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Fk7-4S-Fbc"/>
+                            <constraint firstAttribute="bottom" secondItem="0iQ-37-KU2" secondAttribute="bottom" id="5yK-uR-eXA"/>
+                            <constraint firstItem="0iQ-37-KU2" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Fk7-4S-Fbc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="centerY" secondItem="5jz-xP-Yms" secondAttribute="centerY" id="VyA-cT-zOi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="centerX" secondItem="5jz-xP-Yms" secondAttribute="centerX" id="Wqe-mL-5qW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0iQ-37-KU2" secondAttribute="trailing" id="qxc-Cu-5RI"/>
