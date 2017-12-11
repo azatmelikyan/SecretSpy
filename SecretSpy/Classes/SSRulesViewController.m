@@ -236,11 +236,12 @@
     self.rulesTextView = [[UITextView alloc] initWithFrame: CGRectMake(0, CGRectGetMaxY(self.headerView.frame),
                                                                        CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - offset)];
     self.rulesTextView.autoresizingMask =  UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    UIFont *font = [UIFont systemFontOfSize:14.f];
+    UIFont *font = [UIFont systemFontOfSize:16.f];
     [self.rulesTextView setFont:font];
     self.rulesTextView.text = [[SSLanguageManager sharedInstance] localizedString:@"rules_text"];
     self.rulesTextView.editable = NO;
     self.rulesTextView.selectable = NO;
+    [self.rulesTextView sizeToFit];
 }
 
 - (void)backAction:(id)sender {
